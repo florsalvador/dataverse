@@ -1,378 +1,914 @@
 export default [
   {
-    "id": "ada-lovelace",
-    "name": "Ada Lovelace",
-    "shortDescription": "Pionera en la programación, primera programadora de la historia.",
-    "description": "Una visionaria matemática británica del siglo XIX, es aclamada como la primera programadora de la historia. Su colaboración con Charles Babbage en la creación de la Máquina Analítica la llevó a desarrollar algoritmos, incluyendo el famoso \"algoritmo de Bernoulli\", destinados a ser procesados por una máquina. Su visión pionera la convirtió en una figura fundamental en la informática y la inteligencia artificial. Lovelace demostró que las computadoras podían ir más allá de simples cálculos matemáticos, anticipando un mundo donde la programación sería esencial en la resolución de problemas complejos, dejando una huella imborrable en la ciencia y la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/ada-lovelace.jpg",
+    "id": "persa",
+    "name": "Gato Persa",
+    "shortDescription": "Elegante y cariñoso, el Gato Persa es conocido por su pelaje exuberante y personalidad tranquila.",
+    "description": "El Gato Persa es una raza de gato que se originó en Persia y es apreciado por su pelaje largo y denso. Su elegante apariencia se complementa con una personalidad dulce y tranquila, lo que lo convierte en una mascota ideal para hogares tranquilos. Necesita cuidados regulares para su pelaje, y su adaptabilidad lo hace adecuado para diversas situaciones. Con ojos grandes y expresivos, los Persas son conocidos por su afecto hacia sus dueños. Su esperanza de vida oscila entre 12 y 16 años, y su tamaño mediano los hace perfectos para la vida en interiores.",
+    "imageUrl": "images/persa.jpg",
     "facts": {
-      "yearOfBirth": "1815",
-      "yearOfDeath": "1852",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Ciencia de la Computación"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 3.18,
+      "pesoMax": 5.44,
+      "precioCachorro": 800,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Irán",
+      "alimentacion": "Dieta equilibrada para gatos de pelo largo",
+      "pelaje": "Pelo largo",
+      "caracteristicasFaciales": "Cabeza redonda y ancha con nariz chata, grandes ojos expresivos y orejas pequeñas y redondeadas."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/genera-una-imagen-de-ada-lovelace2c-la-primera-prog/650a1eff8ff04b88833d5cdef0309441"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": false,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": true,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": true
+      },
+      "cuidados": ["Cepillado regular para evitar enredos en el pelaje", "Control de la dieta para prevenir la obesidad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "emmy-noether",
-    "name": "Emmy Noether",
-    "shortDescription": "Matemática destacada, teorema fundamental en álgebra abstracta.",
-    "description": "Una brillante matemática alemana, revolucionó la física teórica con sus contribuciones al teorema de conservación de la energía y el teorema de Noether, fundamentales en la teoría de la relatividad y la mecánica cuántica. A pesar de los obstáculos que enfrentó como mujer en la academia, sus investigaciones en álgebra abstracta y teoría de grupos son fundamentales en la física moderna. Su capacidad para unificar conceptos matemáticos y físicos marcó un hito en la historia de la ciencia, allanando el camino para futuras generaciones de científicas.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/emmy-noether.jpg",
+    "id": "siames",
+    "name": "Gato Siamés",
+    "shortDescription": "Elegante y vocal, el Gato Siamés es conocido por su pelaje corto, ojos azules intensos y personalidad extrovertida.",
+    "description": "El Gato Siamés es una raza felina que se originó en Tailandia. Con su pelaje corto, coloración distintiva y ojos azules intensos, el Siamés es reconocido por su elegancia. Su personalidad extrovertida y vocal lo convierte en un compañero cariñoso y expresivo. Los Siameses disfrutan de la interacción y pueden ser juguetones. Su esperanza de vida varía entre 12 y 16 años, y su tamaño mediano los hace ideales para la vida en interiores.",
+    "imageUrl": "images/siames.jpg",
     "facts": {
-      "yearOfBirth": "1882",
-      "yearOfDeath": "1935",
-      "birthPlace": "Erlangen, Alemania",
-      "mainField": "Matemáticas"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 2.27,
+      "pesoMax": 5.44,
+      "precioCachorro": 700,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Tailandia",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza angular, orejas grandes y puntiagudas, ojos azules intensos y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-an-image-of-of-a-german-woman2c-a-pioneering/6510ddb1e8254b928b8f8f1d5e95fea4"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": true,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes y actividades para estimular la mente", "Cepillado ocasional para mantener el pelaje saludable", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "hypatia-de-alejandria",
-    "name": "Hypatia de Alejandría",
-    "shortDescription": "Matemática y filósofa en la antigua Alejandría.",
-    "description": "Filósofa y matemática en la antigua Alejandría, desafió las normas de género de su época al destacar en una sociedad dominada por hombres. Su legado incluye importantes contribuciones a la geometría y la astronomía, así como su destacado papel como maestra y defensora del conocimiento en una época de agitación política. Hypatia demostró que las mujeres podían sobresalir en campos intelectuales y su valentía al mantener sus creencias filosóficas la convierte en un símbolo de resistencia y sabiduría en la historia de la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hypatia-de-alejandria.jpg",
+    "id": "maine-coon",
+    "name": "Gato Maine Coon",
+    "shortDescription": "El Gato Maine Coon, con su gran tamaño y pelaje semilargo, es conocido por su amabilidad y carácter sociable.",
+    "description": "El Gato Maine Coon es una raza originaria de Estados Unidos, reconocida por su impresionante tamaño y pelaje semilargo. Con una naturaleza amable y carácter sociable, los Maine Coon son excelentes compañeros. Su pelaje suave y tupido requiere cuidados regulares, y su aspecto majestuoso se complementa con ojos grandes y orejas con mechones. La esperanza de vida de esta raza oscila entre 12 y 15 años, y su tamaño grande los hace ideales para hogares espaciosos.",
+    "imageUrl": "images/maine-coon.jpg",
     "facts": {
-      "yearOfBirth": "circa 360",
-      "yearOfDeath": "415",
-      "birthPlace": "Alejandría, Egipto",
-      "mainField": "Matemáticas, Filosofía"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 5.44,
+      "pesoMax": 9.07,
+      "precioCachorro": 1000,
+      "tamaño": "Grande",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos de gran tamaño",
+      "pelaje": "Pelo semilargo",
+      "caracteristicasFaciales": "Cabeza grande con ojos grandes y orejas con mechones."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/create-a-vivid-digital-artwork-or-painting-that-de/6510df0ebe1a4807af22175452761e1a"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": true,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado regular para mantener el pelaje en buenas condiciones", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "marjorie-lee-browne",
-    "name": "Marjorie Lee Browne",
-    "shortDescription": "Matemática, contribuyó a la teoría de números.",
-    "description": "Matemática estadounidense, destacó en una época en la que las mujeres afroamericanas enfrentaban múltiples barreras en la educación superior. No solo obtuvo su doctorado en matemáticas, sino que también se convirtió en una destacada educadora, promoviendo la diversidad en las ciencias matemáticas y desafiando la discriminación racial y de género. Su compromiso con la educación y su capacidad para inspirar a futuras generaciones la convierten en un modelo a seguir para las mujeres en la ciencia, dejando una huella perdurable en la historia académica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjorie-lee-browne.jpg",
+    "id": "bengali",
+    "name": "Gato Bengalí",
+    "shortDescription": "El Gato Bengalí, con su pelaje manchado y aspecto salvaje, es conocido por su energía y naturaleza juguetona.",
+    "description": "El Gato Bengalí es una raza que destaca por su apariencia salvaje y su pelaje manchado similar al de un leopardo. Originarios de Estados Unidos, los Bengalíes son conocidos por su energía y naturaleza juguetona. Su pelaje corto y suave requiere cuidados mínimos. Con un cuerpo ágil y ojos expresivos, los Bengalíes son gatos activos y curiosos. La esperanza de vida de esta raza oscila entre 10 y 16 años, y su tamaño mediano los hace ideales para hogares dinámicos.",
+    "imageUrl": "images/bengali.jpg",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "1979",
-      "birthPlace": "Memphis, Estados Unidos",
-      "mainField": "Matemáticas"
+      "esperanzaDeVidaMin": 10,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 3.18,
+      "pesoMax": 6.8,
+      "precioCachorro": 1200,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos activos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza pequeña con ojos grandes y orejas puntiagudas."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/design-an-inspiring-and-historically-accurate-imag/6510df7e7bb745f69d67f695441607a8"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes y actividades para estimular la actividad", "Cepillado ocasional para mantener el pelaje en buen estado", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "shakuntala-devi",
-    "name": "Shakuntala Devi",
-    "shortDescription": "Matemática prodigio, conocida como la 'Calculadora Humana'.",
-    "description": "Conocida como \"la bruja de las matemáticas\" de la India, dejó una marca indeleble en el mundo de los números. Su capacidad mental asombrosa la llevó a resolver complejos cálculos matemáticos mentalmente en cuestión de segundos, estableciendo récords mundiales. Además de su talento innato, Devi promovió activamente la educación matemática y luchó por la igualdad de género en un país donde las mujeres enfrentaban desafíos en la ciencia y la educación. Su legado destaca el poder de la mente humana y la importancia de la igualdad de oportunidades en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shakuntala-devi.jpg",
+    "id": "siberiano",
+    "name": "Gato Siberiano",
+    "shortDescription": "El Gato Siberiano, con su pelaje denso y resistente, es conocido por ser hipoalergénico y por su naturaleza tranquila.",
+    "description": "El Gato Siberiano es una raza originaria de Rusia y se destaca por su pelaje denso y resistente que lo hace hipoalergénico. Con una naturaleza tranquila y amigable, el Siberiano es un compañero cariñoso. Su pelaje, que varía en colores, requiere cepillado regular. Este gato de tamaño mediano a grande tiene ojos expresivos y orejas puntiagudas. La esperanza de vida de esta raza oscila entre 12 y 18 años, y su tamaño los hace ideales para hogares espaciosos.",
+    "imageUrl": "images/siberiano.jpg",
     "facts": {
-      "yearOfBirth": "1929",
-      "yearOfDeath": "2013",
-      "birthPlace": "Bangalore, India",
-      "mainField": "Matemáticas"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 18,
+      "pesoMin": 4.08,
+      "pesoMax": 9.07,
+      "precioCachorro": 1000,
+      "tamaño": "Mediano a Grande",
+      "lugarDeOrigen": "Rusia",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo largo",
+      "caracteristicasFaciales": "Ojos grandes y redondos, orejas puntiagudas."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado regular para mantener el pelaje en buen estado", "Proporcionar juguetes y rascadores para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "sofia-kovalevskaya",
-    "name": "Sofia Kovalevskaya",
-    "shortDescription": "Matemática y escritora, contribuyó a la teoría de funciones.",
-    "description": "Matemática rusa del siglo XIX, dejó una marca indeleble en la ciencia del siglo XIX al desafiar las barreras de género. Como matemática rusa, superó las restricciones sociales de su época para convertirse en la primera mujer en obtener un doctorado en matemáticas en Europa. Sus contribuciones a la teoría de las ecuaciones diferenciales y la mecánica revolucionaron la disciplina, abriendo nuevas perspectivas en el análisis matemático. Su destacada membresía en la Academia de Ciencias de Suecia marcó un hito en la historia de las mujeres en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sofia-kovalevskaya.jpg",
+    "id": "ragdoll",
+    "name": "Gato Ragdoll",
+    "shortDescription": "El Gato Ragdoll, conocido por su personalidad relajada y su pelaje semilargo, es una raza grande y cariñosa.",
+    "description": "El Gato Ragdoll es una raza felina originaria de Estados Unidos y se caracteriza por su tamaño grande, pelaje semilargo y personalidad relajada. Los Ragdolls son conocidos por su naturaleza cariñosa y su disposición tranquila, permitiendo que los sostengan como muñecas de trapo. Su pelaje requiere cuidados regulares, y sus ojos azules intensos añaden a su atractivo. La esperanza de vida de esta raza oscila entre 12 y 17 años, y su tamaño grande los hace ideales para hogares espaciosos.",
+    "imageUrl": "images/ragdoll.jpg",
     "facts": {
-      "yearOfBirth": "1850",
-      "yearOfDeath": "1891",
-      "birthPlace": "Moscú, Rusia",
-      "mainField": "Matemáticas"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 17,
+      "pesoMin": 4.54,
+      "pesoMax": 9.07,
+      "precioCachorro": 1200,
+      "tamaño": "Grande",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos de gran tamaño",
+      "pelaje": "Pelo semilargo",
+      "caracteristicasFaciales": "Cabeza redonda con ojos azules intensos y orejas medianas."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/indian-woman-writing-math-problems-in-a-blackbard-/6510e19f3db54e14b365b7e8dc5045f6"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": true,
+        "problemasOculares": false,
+        "tendenciaObesidad": true
+      },
+      "cuidados": ["Cepillado regular para mantener el pelaje en buen estado", "Proporcionar juguetes y lugares para trepar", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "yoko-shimomura",
-    "name": "Yoko Shimomura",
-    "shortDescription": "Compositora de música, destacada en la industria de los videojuegos.",
-    "description": "Compositora japonesa, es una figura destacada en la ciencia de la música y el arte sonoro. Aunque no se dedica a la ciencia en el sentido tradicional, su trabajo en la composición musical ha requerido un profundo entendimiento de la teoría musical y la tecnología de audio. Ha contribuido de manera significativa a la industria de los videojuegos, componiendo icónicas bandas sonoras que han enriquecido la experiencia de juego. Su éxito en un campo donde las mujeres estaban subrepresentadas la convierte en un modelo a seguir, incluso en campos no convencionales como la composición musical.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/yoko-shimomura.jpg",
+    "id": "abyssinian",
+    "name": "Gato Abyssinian",
+    "shortDescription": "El Gato Abyssinian, conocido por su pelaje corto y su energía inagotable, es una raza juguetona y curiosa.",
+    "description": "El Gato Abyssinian es una raza antigua originaria de Etiopía y se destaca por su pelaje corto y su coloración cálida y moteada. Con una energía inagotable, los Abyssinians son juguetones y curiosos, disfrutando de la exploración y el juego. Su esperanza de vida oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para hogares activos. Además de su apariencia exótica, los Abyssinians son conocidos por su naturaleza afectuosa y leal.",
+    "imageUrl": "images/abyssinian.jpg",
     "facts": {
-      "yearOfBirth": "1967",
-      "birthPlace": "Hyogo, Japón",
-      "mainField": "Composición Musical, Video Juegos"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 2.27,
+      "pesoMax": 4.54,
+      "precioCachorro": 900,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Etiopía",
+      "alimentacion": "Dieta equilibrada para gatos activos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con orejas medianas y ojos grandes y almendrados."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/yoko-shimomura-making-music-for-a-video-game-in-19/6510e40dd1eb45d0906e8c1f4bb601d3"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": false,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes y actividades para mantener su mente activa", "Cepillado ocasional para mantener el pelaje saludable", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "maryam-mirzakhani",
-    "name": "Maryam Mirzakhani",
-    "shortDescription": "Matemática, ganadora del Premio Fields.",
-    "description": "Matemática iraní, hizo historia al convertirse en la primera mujer en ganar la Medalla Fields, el premio más prestigioso en matemáticas. Sus investigaciones en la geometría de superficies y la teoría de las superficies de Riemann han tenido un impacto duradero en la matemática pura. A lo largo de su carrera, Mirzakhani inspiró a muchas mujeres a perseguir carreras en ciencia y matemáticas, derribando las barreras de género. Su enfoque innovador y su capacidad para resolver problemas complejos la convierten en un modelo a seguir para la comunidad científica y en un símbolo de la excelencia matemática.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maryam-mirzakhani.jpg",
+    "id": "britanico-corto",
+    "name": "Gato Británico de Pelo Corto",
+    "shortDescription": "El Gato Británico de Pelo Corto, con su elegancia y temperamento equilibrado, es conocido por su pelaje denso y suave.",
+    "description": "El Gato Británico de Pelo Corto es una raza felina que se originó en Gran Bretaña. Con su elegancia y temperamento equilibrado, los Británicos de Pelo Corto son conocidos por su pelaje denso y suave, así como por sus ojos redondos y expresivos. Su naturaleza tranquila los convierte en compañeros ideales para hogares tranquilos. La esperanza de vida de esta raza oscila entre 12 y 20 años, y su tamaño mediano los hace versátiles para diferentes entornos.",
+    "imageUrl": "images/britanico-corto.jpg",
     "facts": {
-      "yearOfBirth": "1977",
-      "yearOfDeath": "2017",
-      "birthPlace": "Teherán, Irán",
-      "mainField": "Matemáticas"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 20,
+      "pesoMin": 3.18,
+      "pesoMax": 7.26,
+      "precioCachorro": 1000,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Gran Bretaña",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y orejas pequeñas."
     },
     "extraInfo": {
-      "imageSource": "https://chalkdustmagazine.com/features/mathematics-maryam-mirzakhani/"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": true
+      },
+      "cuidados": ["Cepillado regular para mantener el pelaje en buen estado", "Proporcionar lugares cómodos para descansar", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "adele-goldberg",
-    "name": "Adele Goldberg",
-    "shortDescription": "Informática pionera, co-creadora del lenguaje de programación Smalltalk.",
-    "description": "Informática estadounidense reconocida por su influyente trabajo en la investigación y desarrollo de la programación orientada a objetos. Su contribución más destacada es la creación del lenguaje de programación Smalltalk, que revolucionó la forma en que se desarrollan software y sistemas informáticos. Goldberg ha sido una defensora incansable de la usabilidad y la accesibilidad en la informática, asegurando que las aplicaciones informáticas sean más amigables para los usuarios. Su trabajo ha allanado el camino para una programación más intuitiva y eficiente, y su legado perdura en la industria de la tecnología.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/adele-goldberg.jpg",
+    "id": "fold-escoces",
+    "name": "Gato Fold Escocés",
+    "shortDescription": "El Gato Fold Escocés, con sus orejas dobladas y pelaje suave, es conocido por su aspecto distintivo y su personalidad cariñosa.",
+    "description": "El Gato Fold Escocés es una raza escocesa destacada por sus orejas dobladas hacia adelante, otorgándoles un aspecto distintivo. Con un pelaje suave y expresivos ojos redondos, los Folds Escoceses son encantadores y cariñosos. Su naturaleza juguetona y su disposición afectuosa los hacen ideales como compañeros. La esperanza de vida de esta raza oscila entre 12 y 15 años, y su tamaño mediano los hace perfectos para la vida en interiores.",
+    "imageUrl": "images/fold-escoces.jpg",
     "facts": {
-      "yearOfBirth": "1945",
-      "birthPlace": "Chicago, Estados Unidos",
-      "mainField": "Ciencias de la Computación"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 3.18,
+      "pesoMax": 5.44,
+      "precioCachorro": 1200,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Escocia",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Orejas dobladas hacia adelante y ojos redondos y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://pionerasinformaticas.ujaen.es/en/computer-women-pioneers/adele-goldberg-en"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes y actividades para estimular la mente", "Cepillado ocasional para mantener el pelaje saludable", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "barbara-liskov",
-    "name": "Barbara Liskov",
-    "shortDescription": "Científica de la computación, pionera en programación orientada a objetos.",
-    "description": "Pionera de la informática, es conocida por su trabajo en la programación y la arquitectura de sistemas distribuidos. Fue la primera mujer en obtener un doctorado en ciencias de la computación en el Instituto de Tecnología de Stanford y desarrolló el lenguaje de programación CLU, que estableció fundamentos para la programación orientada a objetos. Liskov ha dejado una marca indeleble en la industria de la tecnología al liderar avances en sistemas de almacenamiento y seguridad informática. Su enfoque en la fiabilidad y la robustez ha influido en el diseño de sistemas críticos en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/barbara-liskov.jpg",
+    "id": "cornish-rex",
+    "name": "Gato Cornish Rex",
+    "shortDescription": "El Gato Cornish Rex, con su pelaje rizado y cuerpo esbelto, es conocido por su personalidad activa y cariñosa.",
+    "description": "El Gato Cornish Rex es una raza felina con un pelaje rizado y suave, originaria del Reino Unido. Con su cuerpo esbelto y orejas grandes, los Cornish Rex son conocidos por su personalidad activa y cariñosa. Su pelaje único no requiere tanto cuidado como otras razas, y su disposición juguetona los hace ideales para hogares dinámicos. La esperanza de vida de esta raza oscila entre 10 y 15 años, y su tamaño mediano los hace adaptables a diversos entornos.",
+    "imageUrl": "images/cornish-rex.jpg",
     "facts": {
-      "yearOfBirth": "1939",
-      "birthPlace": "Los Angeles, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "esperanzaDeVidaMin": 10,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 2.27,
+      "pesoMax": 4.08,
+      "precioCachorro": 1100,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Reino Unido",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza pequeña con orejas grandes y ojos grandes y almendrados."
     },
     "extraInfo": {
-      "imageSource": "https://medium.com/a-computer-of-ones-own/barbara-liskov-inventor-of-abstract-data-types-9f8908fdcf86"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes para estimular la actividad", "Cepillado ocasional para mantener el pelaje en buen estado", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "grace-hopper",
-    "name": "Grace Hopper",
-    "shortDescription": "Científica de la computación, creadora del primer compilador.",
-    "description": "Una de las pioneras de la informática, es famosa por su contribución al desarrollo del primer compilador y al lenguaje de programación COBOL. Además, desafió los estereotipos de género en la década de 1940 al unirse a la Marina de los Estados Unidos y convertirse en la primera programadora de la computadora Harvard Mark I. Su legado abarca la creación de conceptos cruciales como la \"depuración de software\" y su influencia en el desarrollo de la informática moderna, estableciendo estándares para la programación de alto nivel y la innovación tecnológica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/grace-hopper.jpg",
+    "id": "devon-rex",
+    "name": "Gato Devon Rex",
+    "shortDescription": "El Gato Devon Rex, con su pelaje rizado y orejas grandes, es conocido por su personalidad cariñosa y su aspecto único.",
+    "description": "El Gato Devon Rex es una raza felina con un pelaje rizado y suave, originaria del Reino Unido. Con orejas grandes y una personalidad cariñosa, los Devon Rex son gatos encantadores y juguetones. Su pelaje distintivo no requiere muchos cuidados, y su disposición activa los hace ideales para hogares dinámicos. La esperanza de vida de esta raza oscila entre 10 y 15 años, y su tamaño mediano los hace adaptables a diversos entornos.",
+    "imageUrl": "images/devon-rex.jpg",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1992",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "esperanzaDeVidaMin": 10,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 2.27,
+      "pesoMax": 4.08,
+      "precioCachorro": 1200,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Reino Unido",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza pequeña con orejas grandes y ojos grandes y almendrados."
     },
     "extraInfo": {
-      "imageSource": "https://photos.com/featured/grace-hopper-with-early-computer-bettmann.html"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes para estimular la actividad", "Cepillado ocasional para mantener el pelaje en buen estado", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "margaret-hamilton",
-    "name": "Margaret Hamilton",
-    "shortDescription": "Científica de la computación, lideró desarrollo de software para Apollo 11.",
-    "description": "Destacada científica de la computación que desempeñó un papel fundamental en el programa Apollo de la NASA. Fue directora de la División de Ingeniería de Software en el Laboratorio de Instrumentación del MIT, donde desarrolló el concepto de \"ingeniería de software\". Su liderazgo en el desarrollo del software de vuelo para las misiones Apollo fue fundamental para el éxito de la llegada del hombre a la Luna. Hamilton es un ejemplo de cómo la tecnología y la ciencia pueden alcanzar logros extraordinarios cuando se combinan con un enfoque innovador y una visión audaz.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/margaret-hamilton.jpg",
+    "id": "gato-oriental",
+    "name": "Gato Oriental",
+    "shortDescription": "El Gato Oriental, elegante y activo, se destaca por su cuerpo esbelto y sus grandes orejas, siendo una compañía animada y cariñosa.",
+    "description": "El Gato Oriental es una raza felina conocida por su elegancia, cuerpo esbelto y orejas grandes. Originario del Reino Unido, este gato activo y curioso se adapta bien a entornos dinámicos. Con un pelaje corto y sedoso, el Gato Oriental no requiere cuidados extensos, y su personalidad cariñosa lo convierte en un compañero animado. La esperanza de vida de esta raza oscila entre 10 y 15 años, y su tamaño mediano los hace ideales para hogares activos y amorosos.",
+    "imageUrl": "images/gato-oriental.jpg",
     "facts": {
-      "yearOfBirth": "1936",
-      "birthPlace": "Paoli, Indiana, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "esperanzaDeVidaMin": 10,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 2.72,
+      "pesoMax": 4.54,
+      "precioCachorro": 1000,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Reino Unido",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza pequeña con grandes orejas y ojos almendrados."
     },
     "extraInfo": {
-      "imageSource": "https://odetta.ai/blogs/margaret-hamilton-the-first-software-engineer"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar juguetes para estimular la actividad", "Brindar áreas altas para trepar", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "radia-perlman",
-    "name": "Radia Perlman",
-    "shortDescription": "Ingeniera de redes, inventora del algoritmo Spanning Tree.",
-    "description": "Científica de la computación estadounidense, ha dejado una marca indeleble en el mundo de las redes informáticas y la seguridad. Conocida como \"la madre de Internet\", su invención del algoritmo Spanning Tree Protocol (STP) revolucionó la conectividad de redes y sentó las bases para la infraestructura de Internet moderna. A pesar de operar en un campo dominado por hombres, Perlman ha demostrado que las mujeres pueden liderar avances tecnológicos vitales. Su compromiso con la resiliencia de las redes y la ciberseguridad ha influido en la estabilidad y confiabilidad de la comunicación en línea.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/radia-perlman.jpg",
+    "id": "birmano",
+    "name": "Gato Birmano",
+    "shortDescription": "El Gato Birmano, conocido por su pelaje sedoso y ojos azules expresivos, es una raza cariñosa y tranquila con un toque de misticismo.",
+    "description": "El Gato Birmano es una raza felina que se destaca por su pelaje sedoso y ojos azules expresivos. Originarios de Birmania, estos gatos tienen una personalidad cariñosa y tranquila, con un toque de misticismo en su apariencia. El cuidado del pelaje es moderado, y su disposición sociable los convierte en excelentes compañeros. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para la vida en interiores.",
+    "imageUrl": "images/birmano.jpg",
     "facts": {
-      "yearOfBirth": "1951",
-      "birthPlace": "Portsmouth, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 2.72,
+      "pesoMax": 5.44,
+      "precioCachorro": 1100,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Birmania",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo semilargo",
+      "caracteristicasFaciales": "Cabeza redonda con ojos azules grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://hackaday.com/2018/05/29/spanning-the-tree-dr-radia-perlman-untangling-networks/"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado regular para mantener el pelaje en buen estado", "Proporcionar lugares cómodos para descansar", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "shafi-goldwasser",
-    "name": "Shafi Goldwasser",
-    "shortDescription": "Científica de la computación, ganadora del Premio Turing.",
-    "description": "Es una destacada criptógrafa y científica de la computación que ha contribuido significativamente a la teoría de la computación y la seguridad de la información. Su trabajo en criptografía de probabilidad y complejidad computacional ha sentado las bases para la seguridad en línea y la privacidad de datos en un mundo cada vez más digitalizado. Goldwasser es un ejemplo de cómo la ciencia de la computación puede abordar desafíos contemporáneos y proteger la información en la era de la información.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/shafi-goldwasser.jpg",
+    "id": "bombay",
+    "name": "Gato Bombay",
+    "shortDescription": "El Gato Bombay, elegante y de pelaje negro brillante, es conocido por su temperamento cariñoso y su parecido con un mini leopardo.",
+    "description": "El Gato Bombay es una raza felina elegante y única, con un pelaje negro brillante que le otorga un parecido a un mini leopardo. Originarios de Estados Unidos, estos gatos tienen una personalidad cariñosa y afectuosa. Aunque su pelaje es corto, requiere un cepillado ocasional para mantener su brillo. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para hogares donde se aprecia la compañía felina.",
+    "imageUrl": "images/bombay.jpg",
     "facts": {
-      "yearOfBirth": "1958",
-      "birthPlace": "Nueva York, Estados Unidos",
-      "mainField": "Ciencia de la Computación"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 2.72,
+      "pesoMax": 5.44,
+      "precioCachorro": 1200,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.jahresbericht2019.unibe.ch/successes_2019/einstein_lectures/index_eng.html"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado ocasional para mantener el pelaje brillante", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "chien-shiung-wu",
-    "name": "Chien-Shiung Wu",
-    "shortDescription": "Física experimental, contribuyó a la física nuclear.",
-    "description": "Física experimental de origen chino, desafiando los prejuicios de género y nacionalidad, realizó experimentos fundamentales en física de partículas y contribuyó significativamente a la comprensión de la desintegración beta. Su famoso experimento \"Wu\" refutó la paridad en la física de partículas, lo que cambió la forma en que los científicos comprenden las fuerzas fundamentales de la naturaleza. Wu demostró que el talento y la perseverancia pueden superar cualquier barrera, y su legado sigue siendo un faro de inspiración para científicas en todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/chien-shiung-wu.jpg",
+    "id": "exotico-corto",
+    "name": "Gato Exótico de Pelo Corto",
+    "shortDescription": "El Gato Exótico de Pelo Corto, similar al Persa pero con pelaje corto, es conocido por su carácter tranquilo y su apariencia peluda y suave.",
+    "description": "El Gato Exótico de Pelo Corto es una raza felina que comparte similitudes con el Persa, pero con la ventaja de tener un pelaje corto y denso. Originarios de Estados Unidos, estos gatos tienen un carácter tranquilo y afectuoso. Su pelaje, a pesar de ser corto, requiere cuidados regulares para mantenerse en óptimas condiciones. La esperanza de vida de esta raza oscila entre 12 y 15 años, y su tamaño mediano los hace ideales para la convivencia en interiores.",
+    "imageUrl": "images/exotico-corto.jpg",
     "facts": {
-      "yearOfBirth": "1912",
-      "yearOfDeath": "1997",
-      "birthPlace": "Liuhe, Taicang, China",
-      "mainField": "Física"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 3.18,
+      "pesoMax": 6.35,
+      "precioCachorro": 1000,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.thoughtco.com/chien-shiung-wu-biography-3530366"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": true,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": true
+      },
+      "cuidados": ["Cepillado regular para evitar enredos en el pelaje", "Control de la dieta para prevenir la obesidad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "hedy-lamarr",
-    "name": "Hedy Lamarr",
-    "shortDescription": "Actriz e inventora, contribuyó al desarrollo de la tecnología de espectro ensanchado.",
-    "description": "Actriz austroamericana y científica, fue una mente brillante en la intersección de la tecnología y el entretenimiento. Junto con el compositor George Antheil, inventó un sistema de comunicación secreta durante la Segunda Guerra Mundial que sentó las bases para la tecnología de espectro ensanchado y la comunicación inalámbrica moderna. Lamarr demostró que las mujeres pueden destacar tanto en el cine como en la ciencia, y su legado como inventora ha sido fundamental para el desarrollo de la tecnología de comunicación inalámbrica que usamos en la actualidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/hedy-lamarr.jpg",
+    "id": "tonkines",
+    "name": "Gato Tonkinés",
+    "shortDescription": "El Gato Tonkinés, con su pelaje suave y colorido, es conocido por su personalidad juguetona y su apego a sus dueños.",
+    "description": "El Gato Tonkinés es una raza felina caracterizada por su pelaje suave y su patrón de color atractivo. Originario de Estados Unidos, este gato combina la elegancia del Siamés con la robustez del Burmés. Su personalidad juguetona y activa lo convierte en una mascota entretenida y afectuosa. Aunque su pelaje es corto, requiere un cepillado ocasional para mantenerse en óptimas condiciones. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para la vida en interiores.",
+    "imageUrl": "images/tonkines.jpg",
     "facts": {
-      "yearOfBirth": "1914",
-      "yearOfDeath": "2000",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Actuación, Física"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 2.72,
+      "pesoMax": 5.44,
+      "precioCachorro": 1200,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.sparkfun.com/news/6147"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado ocasional para mantener el pelaje en buen estado", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "maria-goeppert-mayer",
-    "name": "Maria Goeppert Mayer",
-    "shortDescription": "Física teórica, ganadora del Premio Nobel de Física.",
-    "description": "Física teórica alemana-estadounidense, dejó una profunda huella en la física nuclear y la mecánica cuántica. Fue la segunda mujer en recibir el Premio Nobel de Física y su trabajo pionero en la estructura de capas nucleares revolucionó nuestra comprensión de los núcleos atómicos. A pesar de las barreras de género en la academia, su dedicación y talento la llevaron a contribuir significativamente a la teoría nuclear, abriendo el camino para futuras investigadoras en un campo dominado por hombres. Maria Goeppert Mayer es un ejemplo inspirador de excelencia científica y perseverancia en la búsqueda del conocimiento.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/maria-goeppert-mayer.jpg",
+    "id": "manx",
+    "name": "Gato Manx",
+    "shortDescription": "El Gato Manx, conocido por su cola corta o inexistente, es cariñoso y juguetón, con una apariencia distintiva y un encanto único.",
+    "description": "El Gato Manx es una raza felina destacada por su cola corta o inexistente, originaria de la Isla de Man. Con una apariencia única y encanto especial, estos gatos tienen una personalidad cariñosa y juguetona. Aunque su pelaje es corto, requiere un cepillado ocasional para mantenerse en óptimas condiciones. La esperanza de vida de esta raza oscila entre 12 y 15 años, y su tamaño mediano los hace ideales para hogares donde se aprecia la compañía felina.",
+    "imageUrl": "images/manx.jpg",
     "facts": {
-      "yearOfBirth": "1906",
-      "yearOfDeath": "1972",
-      "birthPlace": "Kattowitz, Alemania",
-      "mainField": "Física"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 2.72,
+      "pesoMax": 5.44,
+      "precioCachorro": 1000,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Isla de Man",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.wsemexhibit.org/maria-goeppert-mayer.html"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado ocasional para mantener el pelaje en buen estado", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "lise-meitner",
-    "name": "Lise Meitner",
-    "shortDescription": "Física nuclear, contribuyó a la teoría de la fisión nuclear.",
-    "description": "Física austriaca-sueca, dejó un legado imborrable en la física nuclear y la radioquímica. A pesar de enfrentar obstáculos de género en una era dominada por hombres, colaboró con Otto Hahn en el descubrimiento de la fisión nuclear, un avance revolucionario. Aunque no compartió el Premio Nobel por este logro, su contribución fue crucial para comprender la energía nuclear y la física de partículas. Su determinación y pasión por la ciencia han inspirado a generaciones de científicas. Lise Meitner es un símbolo perdurable de la perseverancia femenina y el impacto duradero que las mujeres pueden tener en la ciencia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/lise-meitner.jpg",
+    "id": "noruego-bosque",
+    "name": "Gato Noruego del Bosque",
+    "shortDescription": "El Gato Noruego del Bosque, con su pelaje espeso y cola tupida, es un gato robusto y amigable con una conexión histórica con la naturaleza.",
+    "description": "El Gato Noruego del Bosque es una raza felina robusta, conocida por su pelaje espeso, cola tupida y conexión histórica con la naturaleza. Originario de Noruega, este gato es amigable y disfruta de la compañía de su familia. Aunque su pelaje es semilargo, requiere un cepillado regular para evitar enredos. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño grande y musculoso los hace ideales para hogares que aprecian gatos con aspecto majestuoso.",
+    "imageUrl": "images/noruego-bosque.jpg",
     "facts": {
-      "yearOfBirth": "1878",
-      "yearOfDeath": "1968",
-      "birthPlace": "Viena, Austria",
-      "mainField": "Física"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 4.54,
+      "pesoMax": 7.26,
+      "precioCachorro": 1500,
+      "tamaño": "Grande",
+      "lugarDeOrigen": "Noruega",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo semilargo",
+      "caracteristicasFaciales": "Cabeza triangular con orejas puntiagudas y ojos grandes y almendrados."
     },
     "extraInfo": {
-      "imageSource": "https://www.bing.com/images/create/lise-meitner-in-nuclear-physics-lab-in-19502c-retro/651196e6bbcb4009950e9955c2199760"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado regular para mantener el pelaje en buen estado", "Proporcionar áreas para trepar y explorar", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "sau-lan-wu",
-    "name": "Sau Lan Wu",
-    "shortDescription": "Física de partículas, contribuyó a experimentos clave en física de alta energía.",
-    "description": "Física experimental sinoamericana, ha sido una fuerza motriz en la física de partículas. Destacó en experimentos en el CERN y lideró investigaciones cruciales, como el descubrimiento del quark c, que expandieron nuestro entendimiento de la estructura fundamental de la materia. Wu superó desafíos en una disciplina dominada por hombres y ha sido un faro de inspiración para científicas de todo el mundo. Sau Lan Wu es un ejemplo de excelencia científica y de cómo las mujeres pueden dejar huella en la investigación de vanguardia.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/sau-lan-wu.jpg",
+    "id": "chartreux",
+    "name": "Gato Chartreux",
+    "shortDescription": "El Gato Chartreux, con su pelaje azul y ojos dorados, es conocido por su personalidad tranquila y su lealtad a sus dueños.",
+    "description": "El Gato Chartreux es una raza felina que destaca por su pelaje azul suave y sus ojos dorados expresivos. Originario de Francia, este gato tiene una personalidad tranquila y es leal a sus dueños. Aunque su pelaje es corto, requiere un cepillado ocasional para mantenerlo en óptimas condiciones. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para la vida en interiores.",
+    "imageUrl": "images/chartreux.jpg",
     "facts": {
-      "yearOfBirth": "1940",
-      "birthPlace": "Hong Kong, China",
-      "mainField": "Física de Partículas"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 3.18,
+      "pesoMax": 6.35,
+      "precioCachorro": 1300,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Francia",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con mejillas llenas y ojos grandes y redondos."
     },
     "extraInfo": {
-      "imageSource": "https://repository.aip.org/islandora/object/nbla%3A315195"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado ocasional para mantener el pelaje en buen estado", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "jocelyn-bell-burnell",
-    "name": "Jocelyn Bell Burnell",
-    "shortDescription": "Astrónoma y astrofísica, co-descubridora de los púlsares.",
-    "description": "Astrofísica británica, es una figura extraordinaria en la ciencia. Durante su doctorado, hizo un descubrimiento revolucionario al detectar los primeros púlsares, estrellas de neutrones altamente magnetizadas que emiten pulsos regulares de radiación. A pesar de que su asesor recibió el Premio Nobel por este descubrimiento, Bell Burnell se ha convertido en un símbolo de perseverancia y contribución de las mujeres a la astronomía. Su carrera distinguida y su activismo en favor de la diversidad de género en la ciencia han inspirado a generaciones futuras de científicas. Jocelyn Bell Burnell es un ejemplo de valentía y excelencia científica.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/jocelyn-bell-burnell.jpg",
+    "id": "turco-van",
+    "name": "Gato Turco Van",
+    "shortDescription": "El Gato Turco Van, conocido por su pelaje bicolor y amor por el agua, es un gato juguetón y cariñoso con raíces en Turquía.",
+    "description": "El Gato Turco Van es una raza felina con un pelaje distintivo y bicolor, originaria de Turquía. Este gato es conocido por su amor por el agua y su naturaleza juguetona y cariñosa. Aunque su pelaje es semilargo, no requiere cuidados intensivos. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para familias activas que disfrutan de la interacción con sus mascotas.",
+    "imageUrl": "images/turco-van.jpg",
     "facts": {
-      "yearOfBirth": "1943",
-      "birthPlace": "Belfast, Reino Unido",
-      "mainField": "Astronomía, Astrofísica"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 3.18,
+      "pesoMax": 5.44,
+      "precioCachorro": 1400,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Turquía",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo semilargo",
+      "caracteristicasFaciales": "Cabeza pequeña con orejas puntiagudas y ojos grandes y almendrados."
     },
     "extraInfo": {
-      "imageSource": "https://womeninscienceweadmire.icfo.eu/wiswa-2/jocelyn-bell/"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Proporcionar acceso a agua para satisfacer su amor por el agua", "Brindar juguetes interactivos para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "dorothy-crowfoot-hodgkin",
-    "name": "Dorothy Crowfoot Hodgkin",
-    "shortDescription": "Química, ganadora del Premio Nobel de Química.",
-    "description": "Química británica, es una figura icónica en la ciencia que superó las barreras de género de su época. Su trabajo revolucionario en la cristalografía de rayos X permitió determinar la estructura de importantes biomoléculas, como la penicilina, la vitamina B12 y la insulina. Fue galardonada con el Premio Nobel de Química en 1964, siendo la tercera mujer en recibir este prestigioso reconocimiento. Hodgkin no solo fue una científica excepcional, sino también una defensora de la igualdad de género en la ciencia, allanando el camino para futuras generaciones de científicas y dejando un legado duradero en la investigación y la equidad.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/dorothy-crowfoot-hodgkin.jpg",
+    "id": "curl-americano",
+    "name": "Gato Curl Americano",
+    "shortDescription": "El Gato Curl Americano, con sus orejas rizadas distintivas, es conocido por su personalidad curiosa y su vínculo afectuoso con sus dueños.",
+    "description": "El Gato Curl Americano es una raza felina única, reconocida por sus orejas rizadas hacia atrás. Originario de Estados Unidos, este gato tiene una personalidad curiosa y un fuerte vínculo afectuoso con sus dueños. Aunque su pelaje es corto, requiere un cepillado ocasional para mantenerse en óptimas condiciones. La esperanza de vida de esta raza oscila entre 12 y 16 años, y su tamaño mediano los hace ideales para la convivencia en interiores.",
+    "imageUrl": "images/curl-americano.jpg",
     "facts": {
-      "yearOfBirth": "1910",
-      "yearOfDeath": "1994",
-      "birthPlace": "El Cairo, Egipto / Shipston-on-Stour, Reino Unido",
-      "mainField": "Química"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 16,
+      "pesoMin": 2.72,
+      "pesoMax": 5.44,
+      "precioCachorro": 1300,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Orejas rizadas hacia atrás y cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.some.ox.ac.uk/news/jan-royall-why-we-must-champion-dorothy-hodgkin-for-the-50-note/"
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado ocasional para mantener el pelaje en buen estado", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "marie-curie",
-    "name": "Marie Curie",
-    "shortDescription": "Física y química, ganadora de dos Premios Nobel.",
-    "description": "física y química de origen polaco y nacionalizada francesa, es una de las figuras más icónicas en la historia de la ciencia. Ganadora de dos premios Nobel (Física en 1903 y Química en 1911), Curie realizó investigaciones fundamentales sobre la radiactividad y el descubrimiento de los elementos radio y polonio. Su dedicación y valentía en la investigación científica, a pesar de los desafíos de la discriminación de género y los riesgos de la radiación, la convierten en un modelo a seguir para científicas de todo el mundo.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marie-curie.jpg",
+    "id": "azul-ruso",
+    "name": "Gato Azul Ruso",
+    "shortDescription": "El Gato Azul Ruso, con su pelaje corto y color plateado, es conocido por su elegancia y su personalidad reservada pero leal.",
+    "description": "El Gato Azul Ruso es una raza felina elegante con un pelaje corto y un distintivo color plateado. Originario de Rusia, este gato se destaca por su elegancia y personalidad reservada pero leal. Aunque su pelaje es corto, requiere un cepillado ocasional para mantenerse en óptimas condiciones. La esperanza de vida de esta raza oscila entre 12 y 15 años, y su tamaño mediano los hace ideales para la vida en interiores.",
+    "imageUrl": "images/azul-ruso.jpg",
     "facts": {
-      "yearOfBirth": "1867",
-      "yearOfDeath": "1934",
-      "birthPlace": "Varsovia, Polonia",
-      "mainField": "Física y Química"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 3.18,
+      "pesoMax": 5.44,
+      "precioCachorro": 1400,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Rusia",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Pelo corto",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://www.historyextra.com/period/first-world-war/life-of-the-week-marie-curie/"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": false,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": false,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Cepillado ocasional para mantener el pelaje en buen estado", "Proporcionar lugares cómodos para descansar", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "marjory-stephenson",
-    "name": "Marjory Stephenson",
-    "shortDescription": "Microbióloga y bioquímica, investigó en enzimología.",
-    "description": "Bioquímica británica, brilló como científica en una época en la que las mujeres enfrentaban obstáculos muy significativos en la investigación científica. Su trabajo pionero en microbiología, enzimología y bioquímica contribuyó al entendimiento de procesos fundamentales en la vida. Fue una de las primeras mujeres en ser elegida miembro de la Royal Society, un reconocimiento a su destacada contribución a la ciencia. Además, fue una mentora y defensora de las mujeres en la ciencia, inspirando y allanando el camino para futuras generaciones.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/marjory-stephenson.jpg",
+    "id": "himalayo",
+    "name": "Gato Himalayo",
+    "shortDescription": "El Gato Himalayo, con su pelaje largo y ojos azules, es conocido por su belleza exótica y su personalidad tranquila y afectuosa.",
+    "description": "El Gato Himalayo es una raza felina que combina la elegancia del Persa con la coloración del Siamés. Originario de Estados Unidos, este gato destaca por su pelaje largo y sedoso, así como por sus ojos azules expresivos. Su personalidad tranquila y afectuosa lo convierte en un compañero ideal. El cuidado regular de su pelaje es esencial. La esperanza de vida de esta raza oscila entre 12 y 15 años, y su tamaño mediano los hace adecuados para la vida en interiores.",
+    "imageUrl": "images/himalayo.jpg",
     "facts": {
-      "yearOfBirth": "1885",
-      "yearOfDeath": "1948",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Microbiología, Bioquímica"
+      "esperanzaDeVidaMin": 12,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 3.18,
+      "pesoMax": 5.44,
+      "precioCachorro": 1500,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Estados Unidos",
+      "alimentacion": "Dieta equilibrada para gatos de pelo largo",
+      "pelaje": "Pelo largo",
+      "caracteristicasFaciales": "Cabeza redonda con ojos grandes y expresivos."
     },
     "extraInfo": {
-      "imageSource": "https://microbiologysociety.org/grants-prizes/all-prizes-and-competitions-/prize-lectures/marjory-stephenson-prize-lecture/marjory-stephenson-a-short-history.html"
+      "personalidad": {
+        "tranquilo": true,
+        "cariñoso": true,
+        "sociable": false,
+        "enérgico": false,
+        "juguetón": false
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": true,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": true,
+        "tendenciaObesidad": true
+      },
+      "cuidados": ["Cepillado diario para evitar enredos en el pelaje", "Control de la dieta para prevenir la obesidad", "Visitas regulares al veterinario"]
     }
   },
   {
-    "id": "rosalind-franklin",
-    "name": "Rosalind Franklin",
-    "shortDescription": "Química y cristalógrafa, contribuyó a la comprensión de la estructura del ADN.",
-    "description": "Química y cristalógrafa británica, destacó en un campo dominado por hombres y su contribución a la ciencia es innegable. Sus investigaciones pioneras en la cristalografía de rayos X fueron fundamentales para revelar la estructura del ADN en forma de doble hélice, un hito crucial en la biología molecular. A pesar de que su trabajo inicial fue subestimado, su determinación y habilidad científica allanaron el camino para futuros avances en genética y biología. Franklin es un ejemplo inspirador de cómo las mujeres pueden sobresalir en la ciencia, dejando un legado duradero en la investigación y la igualdad de género.",
-    "imageUrl": "https://laboratoria-dataverse-talks.netlify.app/public/rosalind-franklin.jpg",
+    "id": "esfinge",
+    "name": "Gato Esfinge",
+    "shortDescription": "El Gato Esfinge, sin pelaje y de apariencia única, es conocido por su piel suave y caliente, y su personalidad amorosa y juguetona.",
+    "description": "El Gato Esfinge es una raza felina única que se caracteriza por la ausencia de pelaje y su piel suave y caliente al tacto. Originario de Canadá, este gato tiene una apariencia distintiva y una personalidad amorosa y juguetona. Aunque no tiene pelaje que requiera cepillado, su piel necesita cuidados especiales para mantenerse saludable. La esperanza de vida de esta raza oscila entre 10 y 15 años, y su tamaño mediano los hace adecuados para la vida en interiores.",
+    "imageUrl": "images/esfinge.jpg",
     "facts": {
-      "yearOfBirth": "1920",
-      "yearOfDeath": "1958",
-      "birthPlace": "Londres, Reino Unido",
-      "mainField": "Química, Cristalografía"
+      "esperanzaDeVidaMin": 10,
+      "esperanzaDeVidaMax": 15,
+      "pesoMin": 2.27,
+      "pesoMax": 4.54,
+      "precioCachorro": 2000,
+      "tamaño": "Mediano",
+      "lugarDeOrigen": "Canadá",
+      "alimentacion": "Dieta equilibrada para gatos",
+      "pelaje": "Sin pelo",
+      "caracteristicasFaciales": "Cabeza triangular con grandes orejas y ojos almendrados."
     },
     "extraInfo": {
-      "imageSource": ""
+      "personalidad": {
+        "tranquilo": false,
+        "cariñoso": true,
+        "sociable": true,
+        "enérgico": true,
+        "juguetón": true
+      },
+      "enfermedadesComunes": {
+        "problemasRespiratorios": false,
+        "problemasDentales": true,
+        "problemasCardiacos": false,
+        "problemasDePiel": true,
+        "problemasRenales": false,
+        "problemasOculares": false,
+        "tendenciaObesidad": false
+      },
+      "cuidados": ["Baños regulares para mantener la piel limpia", "Protección solar para evitar quemaduras", "Visitas regulares al veterinario"]
     }
-  }
+  }    
 ];
