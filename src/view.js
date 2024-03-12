@@ -1,16 +1,3 @@
-// export const renderItems = (data) => {
-//   const listaGatos = document.createElement("ul");
-//   for (let i = 0; i < data.length; i++) {
-//     const li = document.createElement("li");
-//     listaGatos.appendChild(li);
-//     li.classList.add("tarjeta");
-//     li.innerHTML = data[i].name;
-//     li.innerHTML += " " + data[i].facts.pelajeGato;
-//     // li.setAttribute("id", data[i].id);
-//   }
-//   return listaGatos;
-// };
-
 export const renderItems = (data) => {
   // Aquí comienza tu código y puedes retornar lo que tu necesites
   const newUl = document.createElement("ul");
