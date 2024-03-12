@@ -33,5 +33,3 @@ export const filterData = (data, filterBy, value) => {
 //     return descendente;
 //   } else return data;
 // };
-
-// comentario
