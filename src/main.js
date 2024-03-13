@@ -1,6 +1,7 @@
 // import { example } from './dataFunctions.js';
 import { filterData } from './dataFunctions.js';
-// import { sortData } from './dataFunctions.js';
+import { filterData2 } from './dataFunctions.js';
+import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 
@@ -39,23 +40,23 @@ const selectPersonalidad = document.getElementById("personalidad");
 selectPersonalidad.addEventListener("change", function() {
   if (selectPersonalidad.value === "tranquilo") {
     root.innerHTML = "";
-    const tranquilo = filterData(data, "personalidad", "tranquilo");
+    const tranquilo = filterData2(data, "personalidad", "tranquilo");
     root.appendChild(renderItems(tranquilo));
   } else if (selectPersonalidad.value === "carinoso") {
     root.innerHTML = "";
-    const carinoso = filterData(data, "personalidad", "carinoso");
+    const carinoso = filterData2(data, "personalidad", "carinoso");
     root.appendChild(renderItems(carinoso));
   } else if (selectPersonalidad.value === "sociable") {
     root.innerHTML = "";
-    const sociable = filterData(data, "personalidad", "sociable");
+    const sociable = filterData2(data, "personalidad", "sociable");
     root.appendChild(renderItems(sociable));
   } else if (selectPersonalidad.value === "energico") {
     root.innerHTML = "";
-    const energico = filterData(data, "personalidad", "energico");
+    const energico = filterData2(data, "personalidad", "energico");
     root.appendChild(renderItems(energico));
   } else if (selectPersonalidad.value === "jugueton") {
     root.innerHTML = "";
-    const jugueton = filterData(data, "personalidad", "jugueton");
+    const jugueton = filterData2(data, "personalidad", "jugueton");
     root.appendChild(renderItems(jugueton));
   } else {
     root.innerHTML = "";
@@ -64,20 +65,20 @@ selectPersonalidad.addEventListener("change", function() {
 })
 
 // evento para ordenar
-// const ordenar = document.getElementById("ordenar");
-// ordenar.addEventListener("change", function() {
-//   if (ordenar.value === "precioAscendente") {
-//     root.innerHTML = "";
-//     const precioAscendente = sortData(data, "precioCachorro", "ascendente");
-//     root.appendChild(renderItems(precioAscendente));
-//   } else if (ordenar.value === "precioDescendente") {
-//     root.innerHTML = "";
-//     const precioDescendente = sortData(data, "precioCachorro", "descendente");
-//     root.appendChild(renderItems(precioDescendente));
-//   } else {
-//     root.innerHTML = "";
-//     root.appendChild(renderItems(data));
-//   }
-// })
+const ordenar = document.getElementById("ordenar");
+ordenar.addEventListener("change", function() {
+  if (ordenar.value === "precioAscendente") {
+    root.innerHTML = "";
+    const precioAscendente = sortData(data, "precioCachorro", "asc");
+    root.appendChild(renderItems(precioAscendente));
+  } else if (ordenar.value === "precioDescendente") {
+    root.innerHTML = "";
+    const precioDescendente = sortData(data, "precioCachorro", "desc");
+    root.appendChild(renderItems(precioDescendente));
+  } else {
+    root.innerHTML = "";
+    root.appendChild(renderItems(data));
+  }
+})
 
 //cambio de la rama feature-newbranchtest
