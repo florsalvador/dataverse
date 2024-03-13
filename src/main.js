@@ -1,6 +1,6 @@
 // import { example } from './dataFunctions.js';
 import { filterData } from './dataFunctions.js';
-import { filterData2 } from './dataFunctions.js';
+import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
@@ -46,68 +46,46 @@ selectPersonalidad.addEventListener("change", function() {
 
   if (selectPersonalidad.value === "tranquilo") {
     
-    const tranquilo = filterData2(data, "personalidad", "tranquilo");
+    const tranquilo = filterDataObj(data, "personalidad", "tranquilo");
     root.appendChild(renderItems(tranquilo));
   } else if (selectPersonalidad.value === "carinoso") {
     
-    const carinoso = filterData2(data, "personalidad", "carinoso");
+    const carinoso = filterDataObj(data, "personalidad", "carinoso");
     root.appendChild(renderItems(carinoso));
   } else if (selectPersonalidad.value === "sociable") {
     
-    const sociable = filterData2(data, "personalidad", "sociable");
+    const sociable = filterDataObj(data, "personalidad", "sociable");
     root.appendChild(renderItems(sociable));
   } else if (selectPersonalidad.value === "energico") {
     
-    const energico = filterData2(data, "personalidad", "energico");
+    const energico = filterDataObj(data, "personalidad", "energico");
     root.appendChild(renderItems(energico));
   } else if (selectPersonalidad.value === "jugueton") {
     
-    const jugueton = filterData2(data, "personalidad", "jugueton");
+    const jugueton = filterDataObj(data, "personalidad", "jugueton");
     root.appendChild(renderItems(jugueton));
   } else {
     
     root.appendChild(renderItems(data));
   }
 })
-//_-------------------------------
-// evento para ordenar
-// const ordenar = document.getElementById("ordenar");
-// ordenar.addEventListener("change", function() {
-//   if (ordenar.value === "precioAscendente") {
-//     root.innerHTML = "";
-//     const precioAscendente = sortData(data, "precioCachorro", "ascendente");
-//     root.appendChild(renderItems(precioAscendente));
-//   } else if (ordenar.value === "precioDescendente") {
-//     root.innerHTML = "";
-//     const precioDescendente = sortData(data, "precioCachorro", "descendente");
-//     root.appendChild(renderItems(precioDescendente));
-//   } else {
-//     root.innerHTML = "";
-//     root.appendChild(renderItems(data));
-//   }
-// })
 
-//--------------------------------------
-
-//cambio de la rama feature-newbranchtest
-
-//cambio adriana
 // evento para ordenar de az
 const ordenar = document.getElementById("orden");
 ordenar.addEventListener("change", function() {
 
   root.innerHTML = "";
 
-  if (ordenar.value === "asc") {
+  if (ordenar.value === "A-Z") {
     
     const ascendente = sortData(data, "id", "asc");
     root.appendChild(renderItems(ascendente));
-  } else if (ordenar.value === "desc") {
+  } else if (ordenar.value === "Z-A") {
     
     const descendente = sortData(data, "id", "desc");
     root.appendChild(renderItems(descendente));
   
-  }
+  } 
 });
 
 //para precio cachorro cambiar "id" por "precioCachorro"
