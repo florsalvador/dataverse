@@ -9,18 +9,30 @@
   border: 1px solid pink;
 } */
 
+
+
+h1{
+  color: #893206;
+  text-align: center;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+  
+}
+
 ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;}li{
   display: flex;
   list-style: none;
-  width: 200px;
+  width: 280px;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  color: rgb(128, 102, 58);
-  background-color: rgb(251, 227, 183);
+  color: #595F5D;
+  background-color: #FFF8F0;
   border: 1px solid rgb(251, 227, 183);
   border-radius: 10px;
   margin: 5px;
@@ -28,7 +40,7 @@ ul{
   text-align: left;
   box-sizing: content-box;
   height: auto;
-  font-family: "Gill Sans Extrabold", sans-serif;
+  
 }
 
 img{
@@ -41,10 +53,17 @@ h2 {
   text-align: center;
   margin-top: 10px;
   margin-bottom: 5px;
+  color: #893206;
 }
 
 .botonVer {
-  display:inline;
+  padding: 10px 20px;
+  background-color: #EB550A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  
 }
 
 p {
@@ -52,3 +71,16 @@ p {
   margin: 0;
   font-size: 16px;
 }
+
+li{
+  padding: 10px;
+}
+
+.divBoton{
+  width: 100%;
+  
+  margin-top: 14px;
+  margin-left: 78px;
+  margin-bottom: 5px;
+}
+
