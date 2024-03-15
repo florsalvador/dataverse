@@ -1,54 +1,69 @@
-/* ul {
-  display: flex;
-  flex-wrap: wrap;
+h1 {
+  color: #6f371a;
+  text-align: center;
 }
 
-.tarjeta {
-  display: inline;
-  padding: 15px;
-  border: 1px solid pink;
-} */
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
 
-ul{
+header {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+ul {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;}li{
-  display: flex;
-  list-style: none;
-  width: 200px;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  color: rgb(128, 102, 58);
-  background-color: rgb(251, 227, 183);
-  border: 1px solid rgb(251, 227, 183);
-  border-radius: 10px;
-  margin: 5px;
-  padding: 5px 10px;
-  text-align: left;
-  box-sizing: content-box;
-  height: auto;
-  font-family: "Gill Sans Extrabold", sans-serif;
-}
-
-img{
-  width: 100%;
-  border-radius: 50%;
+  list-style: none;
 }
 
 h2 {
   font-size: x-large;
   text-align: center;
   margin-top: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  color: #6f371a;
 }
 
-/* .botonVer {
-  
-} */
+.tarjeta {
+  width: 260px;
+  color: #595F5D;
+  background-color: #FFF8F0;
+  border: 4px double rgb(251, 227, 183);
+  border-radius: 10px;
+  margin: 5px;
+  padding: 30px;
+  text-align: left;
+  height: 520px;
+}
 
-p {
-  /* padding: 0; */
+.tarjeta img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.tarjeta p {
   margin: 0;
   font-size: 16px;
 }
+
+.divBoton {
+  width: 100%;
+  margin-top: 14px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.botonVer {
+  padding: 10px 20px;
+  background-color: #ee6856;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
