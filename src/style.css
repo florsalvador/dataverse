@@ -1,23 +1,68 @@
 h1 {
-  color: #6f371a;
+  color: #6f3a34;
   text-align: center;
+  /* font-family: "Paytone One", sans-serif; */
+  font-family: "Laila", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
 }
 
 body {
   font-family: "Inter", sans-serif;
-  margin: 0;
+  background-color: #eae2f4;
+  /* background-color: #B497D6; */
 }
 
 header {
   padding-top: 5px;
-  padding-bottom: 15px;
+  /* padding-bottom: 15px; */
+}
+
+main {
+  margin-top: -16px;
+}
+
+.barra {
+  background-color: #F07A6A;
+  margin-left: 30px;
+  margin-right: 30px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-left: 50px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  color: #FFF8F0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#botonBorrar {
+  border: 1px solid #FFF8F0;
+  border-radius: 5px;
+  background: none;
+  color: #FFF8F0;
+  padding: 7px;
+  cursor: pointer;
+}
+
+#root {
+  background-color: white;
+  padding-top: 15px;
+  margin-left: 30px;
+  margin-right: 30px;
+  /* display: flex;
+  justify-content: center; */
 }
 
 ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   list-style: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 h2 {
@@ -29,12 +74,13 @@ h2 {
 }
 
 .tarjeta {
-  width: 260px;
+  width: 280px;
   color: #595F5D;
   background-color: #FFF8F0;
   border: 4px double rgb(251, 227, 183);
   border-radius: 10px;
-  margin: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   padding: 30px;
   text-align: left;
   height: 520px;
@@ -59,7 +105,8 @@ h2 {
 
 .botonVer {
   padding: 10px 20px;
-  background-color: #ee6856;
+  background-color: #F07A6A;
+  /* background-color: #ee6856; */
   color: white;
   border: none;
   border-radius: 5px;

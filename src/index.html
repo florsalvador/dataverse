@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dataverse</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
 
-      <h1>Razas de gatos</h1>
+<head>
+  <meta charset="utf-8">
+  <title>Dataverse</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
+  <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Lilita+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Londrina+Solid:wght@100;300;400;900&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+
+    <h1>Razas de gatos</h1>
+
+    <div class="barra">
       <label for="pelajeGato">Filtrar por pelaje</label>
       <select name="pelajeGato" id="pelajeGato">
         <option value="todos" selected>Todos</option>
@@ -41,20 +48,23 @@
         <option value="precio-desc">Precio (mayor-menor)</option>
       </select>
 
-      <div id="conteo">Cantidad: 24</div>
+      <span id="conteo">Cantidad: 24</span>
+      <button id="botonBorrar">Borrar filtros</button>
+    </div>
 
-    </header>
-    
-    <main>
-      <h2></h2>
-      <div id="root">
-      </div>
-    </main>
+  </header>
 
-    <footer>
-      <p>Hecho por: Adriana Ticona y Flor Hernández</p>
-    </footer>
-  
-    <script src="main.js" type="module"></script>
-  </body>
+  <main>
+    <h2></h2>
+    <div id="root">
+    </div>
+  </main>
+
+  <footer>
+    <p>Hecho por: Adriana Ticona y Flor Hernández</p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
