@@ -20,7 +20,17 @@ export const sortData = (data, sortBy, sortOrder) => {
   });
 
   return data1;
-
 };
 
+export const sortDataPrice = (data, sortBy, sortOrder) => {
+  const data1 = data;
+  data1.sort((a, b) =>{
+    if(sortOrder === "asc"){
+      return (a["facts"][sortBy] > b["facts"][sortBy]) ? 1 : -1; //codigo ternario si es true devuelve 1 si es false devuelve -1
+    }else if(sortOrder === "desc"){
+      return (a["facts"][sortBy] < b["facts"][sortBy]) ? 1 : -1;
+    }else return 0;
+  });
 
+  return data1;
+};
