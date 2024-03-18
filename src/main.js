@@ -1,7 +1,7 @@
-import { filterData, sortDataName } from './dataFunctions.js';
+// import { example } from './dataFunctions.js';
+import { filterData, sortDataPrice } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
-import { computeStats } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 
@@ -56,14 +56,14 @@ function filtrarPersonalidad(data, personalidadSelec) {
 function ordenar(data, ordenSelec) {
   let gatosOrdenados = data;
 
-  if (ordenSelec === "A-Z") {
-    gatosOrdenados = sortDataName(data, "id", "asc");
+  if (ordenSelec === "A-Z")  {
+    gatosOrdenados = sortData(data, "id", "asc");
   } else if (ordenSelec === "Z-A") {
-    gatosOrdenados = sortDataName(data, "id", "desc");
+    gatosOrdenados = sortData(data, "id", "desc"); 
   } else if (ordenSelec === "precio-asc") {
-    gatosOrdenados = sortData(data, "precioCachorro", "asc");
-  } else if (ordenSelec === "precio-desc") {
-    gatosOrdenados = sortData(data, "precioCachorro", "desc");
+    gatosOrdenados = sortDataPrice(data, "precioCachorro", "asc"); 
+  }else if (ordenSelec === "precio-desc") {
+    gatosOrdenados = sortDataPrice(data, "precioCachorro", "desc"); 
   }
 
   return gatosOrdenados;
@@ -126,7 +126,7 @@ botonBorrar.addEventListener("click", function () {
   selectPelaje.value = "none";
   selectPersonalidad.value = "none";
   selectOrden.value = "sin-orden";
-  console.log(computeStats(data));
+  // console.log(computeStats(data));
 })
 
 // al cargar la página, establece los valores por defecto

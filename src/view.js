@@ -8,17 +8,14 @@ export const renderItems = (data) => {
     newLi.setAttribute("itemscope", true);
     newLi.setAttribute("itemtype", "RazasDeGatos");
 
-    newLi.innerHTML = `<div>
-    <img src="${onlyCat.imageUrl}" alt="${onlyCat.id}">
+    newLi.innerHTML = `<img src="${onlyCat.imageUrl}" alt="${onlyCat.id}">
     <h2 itemprop="name">${onlyCat.name}</h2>
     <p itemprop="shortDescription" class="descripcion">${onlyCat.shortDescription}</p>
     <hr/>
     <p><span class="datos">✦ Tamaño:</span> <span itemprop="tamanoGato">${onlyCat.facts["tamanoGato"]}</span></p>
     <p><span class="datos">✦ Pelaje:</span> <span itemprop="pelajeGato">${onlyCat.facts["pelajeGato"]}</span></p>
     <p><span class="datos">✦ Esperanza de vida:</span> <span itemprop="esperanzaMax">${onlyCat.facts["esperanzaMax"]} años</span></p>
-    <p><span class="datos">✦ Precio:</span> <span itemprop="precioCachorro">${onlyCat.facts["precioCachorro"]} dólares</span></p>
-    <div class="divBoton"><button id="ver-mas" class="botonVer">Ver más</button></div>
-  </div>`
+    <p><span class="datos">✦ Precio:</span> <span itemprop="precioCachorro">${onlyCat.facts["precioCachorro"]} dólares</span></p>`
 
     newUl.appendChild(newLi); // inserta la etiqueta li en la etiqueta ul
   });
@@ -26,3 +23,4 @@ export const renderItems = (data) => {
 };
 
 {/* <div class="linea"></div> */}
+{/* <div class="divBoton"><button id="ver-mas" class="botonVer">Ver más</button></div> */}

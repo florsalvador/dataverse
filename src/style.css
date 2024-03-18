@@ -25,7 +25,7 @@ body {
 
 header {
   padding-top: 25px;
-  background: no-repeat url(images/gatonegro.png);
+  background: no-repeat url(images/header-gato.png);
   background-position: bottom -12px right 100px;
   background-size: 15%;
   padding-bottom: 45px;
@@ -87,7 +87,8 @@ select {
 }
 
 #root {
-  background-color: #EFEFEF;
+  /* background-color: #EFEFEF; */
+  background-color: #eae2f4;
   /* background-color: #FFF8F0; */
   /* background-color: #fed9b7; */
   /* border: 1px solid #F07A6A; */
@@ -130,8 +131,12 @@ h2 {
   margin-bottom: 15px;
   padding: 30px;
   text-align: left;
-  height: 560px;
+  height: 530px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.tarjeta:hover {
+  scale: 1.05;
 }
 
 .tarjeta img {
@@ -185,11 +190,18 @@ hr {
 
 footer {
   background-color: #EFEFEF;
+  /* background-color: red; */
+  /* margin: 0;
+  padding: 0; */
   padding: 5px 0 20px 0;
   /* margin: 0 30px; */
   text-align: center;
   font-style: italic;
   color: #595F5D;
+}
+
+footer p {
+  margin: 0;
 }
 
 @media only screen and (max-width: 450px) {
