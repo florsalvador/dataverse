@@ -1,5 +1,5 @@
 h1 {
-  color: #6f3a34;
+  color: #6f3a34;  /* #52144C; */
   text-align: center;
   /* font-family: "Paytone One", sans-serif; */
   font-family: "Laila", serif;
@@ -24,7 +24,7 @@ main {
 }
 
 .barra {
-  background-color: #F07A6A;
+  background-color: #F07A6A; 
   margin-left: 30px;
   margin-right: 30px;
   padding-top: 24px;
@@ -103,6 +103,7 @@ h2 {
   text-align: center;
 }
 
+
 .botonVer {
   padding: 10px 20px;
   background-color: #F07A6A;
@@ -112,4 +113,10 @@ h2 {
   border-radius: 5px;
   cursor: pointer;
   margin: 0 auto;
+}
+
+@media(width < 400px) {
+  ul{
+   flex-direction: column;
+  }
 }

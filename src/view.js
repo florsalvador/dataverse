@@ -14,7 +14,7 @@ export const renderItems = (data) => {
     <p>Pelaje: <span itemprop="pelajeGato">${onlyCat.facts["pelajeGato"]}</span></p>
     <p>Esperanza de vida: <span itemprop="esperanzaMax">${onlyCat.facts["esperanzaMax"]}</span></p>
     <p>Precio: <span itemprop="precioCachorro">${onlyCat.facts["precioCachorro"]}</span></p>
-    <div class="divBoton"><button id="ver-mas" class="botonVer">Ver más</button></div>
+    <div class="divBoton" ><button id="ver-mas" class="botonVer">Ver más</button></div>
     
   </div>`
 
@@ -22,3 +22,4 @@ export const renderItems = (data) => {
   });
   return newUl;
 };
+

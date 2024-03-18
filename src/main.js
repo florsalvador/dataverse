@@ -5,6 +5,7 @@ import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 
+
 const conteo = document.getElementById("conteo");
 
 // muestra los datos en index
@@ -124,5 +125,19 @@ window.addEventListener("load", function () {
   selectPersonalidad.value = "todos";
   ordenar.value = "sin-orden";
 });
+
+
+//Funcionalidad de los botones ver mas
+let botonesVer= [];
+botonesVer = document.querySelectorAll(".botonVer");
+
+for (let i = 0; i < data.length; i++) {
+  botonesVer[i].addEventListener("click", function () {
+    sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+    //console.log(JSON.stringify(data[i]));
+    window.location.href = "gato.html";
+  });
+}
+
 
 
