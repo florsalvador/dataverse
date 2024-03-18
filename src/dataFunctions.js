@@ -1,4 +1,3 @@
-
 export const filterData = (data, filterBy, value) => {
   return data.filter(cat => cat["facts"][filterBy] === value)
 };

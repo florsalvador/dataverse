@@ -5,19 +5,22 @@ export const renderItems = (data) => {
   data.forEach(onlyCat => {
     const newLi = document.createElement("li"); // crear la etiqueta li para un gato
     newLi.classList.add("tarjeta"); // agrega la clase "tarjeta" al li
+    newLi.setAttribute("itemscope", true);
+    newLi.setAttribute("itemtype", "RazasDeGatos");
 
-    newLi.innerHTML = `<div itemscope itemtype="RazasDeGatos">
-    <img src="${onlyCat.imageUrl}" alt="${onlyCat.id}">
+    newLi.innerHTML = `<img src="${onlyCat.imageUrl}" alt="${onlyCat.id}">
     <h2 itemprop="name">${onlyCat.name}</h2>
-    <p itemprop="shortDescription">${onlyCat.shortDescription}</p>
-    <p>Tamaño: <span itemprop="tamanoGato">${onlyCat.facts["tamanoGato"]}</span></p>
-    <p>Pelaje: <span itemprop="pelajeGato">${onlyCat.facts["pelajeGato"]}</span></p>
-    <p>Esperanza de vida: <span itemprop="esperanzaMax">${onlyCat.facts["esperanzaMax"]}</span></p>
-    <p>Precio: <span itemprop="precioCachorro">${onlyCat.facts["precioCachorro"]}</span></p>
-  </div>`
+    <p itemprop="shortDescription" class="descripcion">${onlyCat.shortDescription}</p>
+    <hr/>
+    <p><span class="datos">✦ Tamaño:</span> <span itemprop="tamanoGato">${onlyCat.facts["tamanoGato"]}</span></p>
+    <p><span class="datos">✦ Pelaje:</span> <span itemprop="pelajeGato">${onlyCat.facts["pelajeGato"]}</span></p>
+    <p><span class="datos">✦ Esperanza de vida:</span> <span itemprop="esperanzaMax">${onlyCat.facts["esperanzaMax"]} años</span></p>
+    <p><span class="datos">✦ Precio:</span> <span itemprop="precioCachorro">${onlyCat.facts["precioCachorro"]} dólares</span></p>`
 
     newUl.appendChild(newLi); // inserta la etiqueta li en la etiqueta ul
   });
   return newUl;
 };
 
+{/* <div class="linea"></div> */}
+{/* <div class="divBoton"><button id="ver-mas" class="botonVer">Ver más</button></div> */}
