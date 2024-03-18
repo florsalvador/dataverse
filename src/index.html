@@ -1,65 +1,77 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dataverse</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1>Razas de gatos</h1>
+
+<head>
+  <meta charset="utf-8">
+  <title>Razas de gatos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Lilita+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Londrina+Solid:wght@100;300;400;900&family=Rubik+Gemstones&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Razas de gatos</h1>
+    <h3>Las 24 razas de gatos más populares</h3>
+  </header>
+
+  <nav class="barra">
+    <!-- <div class="barraFiltros"> -->
       <label for="pelajeGato">Filtrar por pelaje</label>
       <select name="pelajeGato" id="pelajeGato">
-        <option value="todos" selected>Todos</option>
+        <option value="none">Filtrar por pelaje</option>
+        <option value="todos">Todos</option>
         <option value="pelo-corto">Pelo corto</option>
         <option value="pelo-semilargo">Pelo semilargo</option>
         <option value="pelo-largo">Pelo largo</option>
         <option value="sin-pelo">Sin pelo</option>
       </select>
+
       <label for="personalidad">Filtrar por personalidad</label>
       <select name="personalidad" id="personalidad">
-        <option value="todos" selected>Todos</option>
+        <option value="none">Filtrar por personalidad</option>
+        <option value="todos">Todos</option>
         <option value="tranquilo">Tranquilo</option>
         <option value="carinoso">Cariñoso</option>
         <option value="sociable">Sociable</option>
         <option value="energico">Enérgico</option>
         <option value="jugueton">Juguetón</option>
       </select>
-    
 
       <label for="orden">Ordenar</label>
       <select id="orden" name="orden">
-        <option value="sin-orden">Sin orden</option>
-        <option value="A-Z">A-Z</option>
-        <option value="Z-A">Z-A</option>
+        <option value="sin-orden">Ordenar</option>
+        <!-- <option value="sin-orden">Sin orden</option> -->
+        <option value="A-Z">Nombre (A-Z)</option>
+        <option value="Z-A">Nombre (Z-A)</option>
         <option value="precio-asc">Precio (menor-mayor)</option>
         <option value="precio-desc">Precio (mayor-menor)</option>
       </select>
 
-    </header>
-    <main>
-      <h2></h2>
-      <div id="root">
-        <!-- <ul>
-          <li itemscope itemtype="RazasDeGatos">
-            <img src="images/persa.jpg" alt="persa">
-            <h2 itemprop="name">Gato persa</h2>
-            <p itemprop="shortDescription">Elegante y cariñoso, el Gato Persa es conocido por su pelaje exuberante y personalidad tranquila.</p>
-            <p>Tamaño: <span itemprop="tamanoGato">Mediano</span></p>
-            <p>Pelaje: <span itemprop="pelajeGato">Pelo largo</span></p>
-            <p>Esperanza de vida: <span itemprop="esperanzaMax">16 años</span></p>
-            <p>Precio: <span itemprop="precioCachorro">800 dólares</span></p>
-            <button id="ver-mas" class="botonVer">Ver más</button>
-          </li>
-        </ul> -->
-      </div>
-    </main>
-    <footer>
-      <p>Hecho por: Adriana Ticona y Flor Hernández</p>
-    </footer>
-    <script src="main.js" type="module"></script>
-  </body>
+      <span id="conteo">Cantidad: 24</span>
+      <button id="botonBorrar">Borrar filtros</button>
+    <!-- </div> -->
+  </nav>
+
+  <main>
+    <div id="root">
+    </div>
+  </main>
+
+  <footer>
+    <p>Hecho por: Adriana Ticona y Flor Hernández</p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>

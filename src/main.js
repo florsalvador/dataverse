@@ -1,5 +1,4 @@
-// import { example } from './dataFunctions.js';
-import { filterData } from './dataFunctions.js';
+import { filterData, sortDataName } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
@@ -10,119 +9,121 @@ const root = document.querySelector("#root");
 document.querySelector("main").appendChild(root);
 root.appendChild(renderItems(data));
 
-// evento para select pelaje
-const selectPelaje = document.querySelector("#pelajeGato");
-selectPelaje.addEventListener("change", function () {
-  root.innerHTML = "";
-  selectPersonalidad.selectedIndex = 0; // muestra opción "Todos" en filtro de personalidad
-  if (selectPelaje.value === "pelo-corto") {
-    const peloCorto = filterData(data, "pelajeGato", "Pelo corto");
-    root.appendChild(renderItems(peloCorto));
-  } else if (selectPelaje.value === "pelo-semilargo") {
-    const peloSemilargo = filterData(data, "pelajeGato", "Pelo semilargo");
-    root.appendChild(renderItems(peloSemilargo));
-  } else if (selectPelaje.value === "pelo-largo") {
-    const peloLargo = filterData(data, "pelajeGato", "Pelo largo");
-    root.appendChild(renderItems(peloLargo));
-  } else if (selectPelaje.value === "sin-pelo") {
-    const sinPelo = filterData(data, "pelajeGato", "Sin pelo");
-    root.appendChild(renderItems(sinPelo));
-  } else {
-    root.appendChild(renderItems(data));
+const conteo = document.getElementById("conteo");
+
+// FUNCIONES USADAS EN LOS EVENTOS
+
+function filtrarPelaje(data, pelajeSelec) {
+  let gatosFiltrados = data;
+
+  if (pelajeSelec === "pelo-corto") {
+    gatosFiltrados = filterData(data, "pelajeGato", "Pelo corto");
+  } else if (pelajeSelec === "pelo-semilargo") {
+    gatosFiltrados = filterData(data, "pelajeGato", "Pelo semilargo");
+  } else if (pelajeSelec === "pelo-largo") {
+    gatosFiltrados = filterData(data, "pelajeGato", "Pelo largo");
+  } else if (pelajeSelec === "sin-pelo") {
+    gatosFiltrados = filterData(data, "pelajeGato", "Sin pelo");
   }
+
+  return gatosFiltrados;
+}
+
+function filtrarPersonalidad(data, personalidadSelec) {
+  let gatosFiltrados = data;
+
+  if (personalidadSelec === "tranquilo") {
+    gatosFiltrados = filterDataObj(data, "personalidad", "tranquilo");
+  } else if (personalidadSelec === "carinoso") {
+    gatosFiltrados = filterDataObj(data, "personalidad", "carinoso");
+  } else if (personalidadSelec === "sociable") {
+    gatosFiltrados = filterDataObj(data, "personalidad", "sociable");
+  } else if (personalidadSelec === "energico") {
+    gatosFiltrados = filterDataObj(data, "personalidad", "energico");
+  } else if (personalidadSelec === "jugueton") {
+    gatosFiltrados = filterDataObj(data, "personalidad", "jugueton");
+  }
+
+  return gatosFiltrados;
+}
+
+function ordenar(data, ordenSelec) {
+  let gatosOrdenados = data;
+
+  if (ordenSelec === "A-Z") {
+    gatosOrdenados = sortDataName(data, "id", "asc");
+  } else if (ordenSelec === "Z-A") {
+    gatosOrdenados = sortDataName(data, "id", "desc");
+  } else if (ordenSelec === "precio-asc") {
+    gatosOrdenados = sortData(data, "precioCachorro", "asc");
+  } else if (ordenSelec === "precio-desc") {
+    gatosOrdenados = sortData(data, "precioCachorro", "desc");
+  }
+
+  return gatosOrdenados;
+}
+
+// EVENTOS SELECT
+
+const selectPelaje = document.querySelector("#pelajeGato");
+const selectPersonalidad = document.querySelector("#personalidad");
+const selectOrden = document.querySelector("#orden");
+
+// evento para select pelaje
+selectPelaje.addEventListener("change", function (evento) { // event: la informacion del evento, cuando haces un cambio viaja la informacion de que has seleccionado o que has seleccionado previamente
+  
+  //insertar las funciones
+  const gatosFiltradosPelaje = filtrarPelaje(data, evento.target.value);
+  const gatosFiltradosPelajePersonalidad = filtrarPersonalidad(gatosFiltradosPelaje, selectPersonalidad.value);
+  const gatosFiltradosOrdenados = ordenar(gatosFiltradosPelajePersonalidad, selectOrden.value) //si no esta seleccionado el select entonces la funcion retorna gatos filtrados
+
+  root.innerHTML = "";
+  root.appendChild(renderItems(gatosFiltradosOrdenados));
+  conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
 });
 
-// evento para select pelaje con funcion afuera
-// const selectPelaje = document.querySelector("#pelajeGato");
-
-// const eventPelaje = () => {
-//   root.innerHTML = "";
-//   selectPersonalidad.selectedIndex = 0; // muestra opción "Todos" en filtro de personalidad
-//   if (selectPelaje.value === "pelo-corto") {
-//     const peloCorto = filterData(data, "pelajeGato", "Pelo corto");
-//     root.appendChild(renderItems(peloCorto));
-//   } else if (selectPelaje.value === "pelo-semilargo") {
-//     const peloSemilargo = filterData(data, "pelajeGato", "Pelo semilargo");
-//     root.appendChild(renderItems(peloSemilargo));
-//   } else if (selectPelaje.value === "pelo-largo") {
-//     const peloLargo = filterData(data, "pelajeGato", "Pelo largo");
-//     root.appendChild(renderItems(peloLargo));
-//   } else if (selectPelaje.value === "sin-pelo") {
-//     const sinPelo = filterData(data, "pelajeGato", "Sin pelo");
-//     root.appendChild(renderItems(sinPelo));
-//   } else {
-//     root.appendChild(renderItems(data));
-//   }
-// }
-
-// selectPelaje.addEventListener("change", eventPelaje);
-
-// const pelajeSelected = 
 
 // evento para select personalidad
-const selectPersonalidad = document.querySelector("#personalidad");
-selectPersonalidad.addEventListener("change", function () {
+selectPersonalidad.addEventListener("change", function (evento) {
+
+  // insertar las funciones
+  const gatosFiltradosPelaje = filtrarPelaje(data, selectPelaje.value);
+  const gatosFiltradosPelajePersonalidad = filtrarPersonalidad(gatosFiltradosPelaje, evento.target.value);
+  const gatosFiltradosOrdenados = ordenar(gatosFiltradosPelajePersonalidad, selectOrden.value);
+
   root.innerHTML = "";
-  selectPelaje.selectedIndex = 0; // muestra opción "Todos" en filtro de pelaje
-  if (selectPersonalidad.value === "tranquilo") {
-    const tranquilo = filterDataObj(data, "personalidad", "tranquilo");
-    root.appendChild(renderItems(tranquilo));
-  } else if (selectPersonalidad.value === "carinoso") {
-    const carinoso = filterDataObj(data, "personalidad", "carinoso");
-    root.appendChild(renderItems(carinoso));
-  } else if (selectPersonalidad.value === "sociable") {
-    const sociable = filterDataObj(data, "personalidad", "sociable");
-    root.appendChild(renderItems(sociable));
-  } else if (selectPersonalidad.value === "energico") {
-    const energico = filterDataObj(data, "personalidad", "energico");
-    root.appendChild(renderItems(energico));
-  } else if (selectPersonalidad.value === "jugueton") {
-    const jugueton = filterDataObj(data, "personalidad", "jugueton");
-    root.appendChild(renderItems(jugueton));
-  } else {
-    root.appendChild(renderItems(data));
-  }
+  root.appendChild(renderItems(gatosFiltradosOrdenados));
+  conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
 });
 
-// evento para ordenar de az
-const ordenar = document.querySelector("#orden");
-ordenar.addEventListener("change", function () {
+// evento para ordenar
+selectOrden.addEventListener("change", function (evento) {
+
+  // insertar las funciones
+  const gatosFiltradosPelaje = filtrarPelaje(data, selectPelaje.value);
+  const gatosFiltradosPelajePersonalidad = filtrarPersonalidad(gatosFiltradosPelaje, selectPersonalidad.value);
+  const gatosFiltradosOrdenados = ordenar(gatosFiltradosPelajePersonalidad, evento.target.value);
+
   root.innerHTML = "";
-  if (ordenar.value === "A-Z") {
-    const ascendente = sortData(data, "id", "asc");
-    root.appendChild(renderItems(ascendente));
-  } else if (ordenar.value === "Z-A") {
-    const descendente = sortData(data, "id", "desc");
-    root.appendChild(renderItems(descendente));
-  } 
-  // else if (ordenar.value === "sin-orden") {
-  //   root.appendChild(renderItems(data));
-  // }
+  root.appendChild(renderItems(gatosFiltradosOrdenados));
+  conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length;
 });
 
-// evento para ordenar todo
-// const ordenar = document.querySelector("#orden");
-// ordenar.addEventListener("change", function () {
-//   root.innerHTML = "";
-//   if (selectPelaje.value !== "todos") {
-//     if (ordenar.value === "A-Z") {
-//       const ascendente = sortData(filterData(data, "pelajeGato", "Pelo corto"), "id", "asc");
-//       root.appendChild(renderItems(ascendente));
-//     } else if (ordenar.value === "Z-A") {
-//       const descendente = sortData(eventPelaje, "id", "desc");
-//       root.appendChild(renderItems(descendente));
-//     }
-//   } else if (ordenar.value === "A-Z") {
-//     const ascendente = sortData(data, "id", "asc");
-//     root.appendChild(renderItems(ascendente));
-//   } else if (ordenar.value === "Z-A") {
-//     const descendente = sortData(data, "id", "desc");
-//     root.appendChild(renderItems(descendente));
-//   }
-// });
+// evento para boton borrar filtros
+const botonBorrar = document.getElementById("botonBorrar");
+botonBorrar.addEventListener("click", function () {
+  root.innerHTML = "";
+  root.appendChild(renderItems(data));
+  conteo.textContent = "Cantidad: " + data.length;
+  selectPelaje.value = "none";
+  selectPersonalidad.value = "none";
+  selectOrden.value = "sin-orden";
+})
 
-// Al cargar la página, establecer el valor del select pelaje como "todos"
+// al cargar la página, establece los valores por defecto
 window.addEventListener("load", function () {
-  selectPelaje.value = "todos";
-  selectPersonalidad.value = "todos";
+  selectPelaje.value = "none";
+  selectPersonalidad.value = "none";
+  selectOrden.value = "sin-orden";
 });
+
