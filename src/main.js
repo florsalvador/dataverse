@@ -12,10 +12,10 @@ document.querySelector("main").appendChild(root);
 root.appendChild(renderItems(data));
 
 // menu responsive
-const menuResponsive = document.querySelector(".menu-responsive");
+const menuNormal = document.querySelector(".menu-normal");
 const menuBoton = document.querySelector(".menu-boton");
 menuBoton.addEventListener("click", function() {
-  menuResponsive.style.display = "block";
+  menuNormal.style.display = "flex";
 })
 
 // FUNCIONES USADAS EN LOS EVENTOS

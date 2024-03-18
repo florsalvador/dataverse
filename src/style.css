@@ -84,6 +84,7 @@ select {
 
 .menu-responsive {
   display: none;
+  flex-direction: column;
 }
 
 #root {
@@ -272,9 +273,9 @@ footer p {
     display: none;
   }
 
-  .menu-responsive {
+  /* .menu-responsive {
     display: none;
-  }
+  } */
 
   .menu-boton {
     display: block;
