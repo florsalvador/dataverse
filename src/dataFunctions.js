@@ -31,3 +31,11 @@ export const sortDataName = (data, sortBy, sortOrder) => {
 
   return dataSorted;
 };
+
+// funcion estadisticas
+export const computeStats = (data) => {
+  const precioTotal = data.reduce((accumulator, cat) => {
+    return (accumulator + cat["facts"]["precioCachorro"]);
+  }, 0);
+  return precioTotal / 24;
+};

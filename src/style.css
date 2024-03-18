@@ -11,6 +11,7 @@ h1 {
 h3 {
   text-align: center;
   margin: 0;
+  font-size: 18px;
   /* margin-bottom: 35px; */
   color: #595F5D;
 }
@@ -27,7 +28,7 @@ header {
   background: no-repeat url(images/gatonegro.png);
   background-position: bottom -12px right 100px;
   background-size: 15%;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
   margin: 0;
 }
 
@@ -38,6 +39,7 @@ nav {
   background-color: #F07A6A;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   /* margin-left: 30px; */
   /* margin-right: 30px; */
   /* height: 70px; */
@@ -71,6 +73,19 @@ select {
   background-color: #dc6f61;
 }
 
+.menu-boton {
+  color: white;
+  font-size: 20px;
+  border: none;
+  background: none;
+  display: none;
+  cursor: pointer;
+}
+
+.menu-responsive {
+  display: none;
+}
+
 #root {
   background-color: #EFEFEF;
   /* background-color: #FFF8F0; */
@@ -94,7 +109,7 @@ ul {
 }
 
 h2 {
-  font-size: x-large;
+  font-size: 24px;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -177,8 +192,83 @@ footer {
   color: #595F5D;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 450px) {
+
+  /* #root {
+    padding: 10px 20px 5px 20px;
+  } */
+  header {
+    background: none;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  /* nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  } */
+
+  .menu-boton {
+    display: block;
+  }
+
+  .menu-normal {
+    display: none;
+  }
+
+  select {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
   .tarjeta {
-    width: 360px;
+    margin-top: 5px;
+    height: auto;
+  }
+
+  .tarjeta p {
+    font-size: 14px;
+  }
+
+  header {
+    background: none;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    background: none;
+  }
+
+  .menu-normal {
+    display: none;
+  }
+
+  .menu-responsive {
+    display: none;
+  }
+
+  .menu-boton {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header {
+    background-position: bottom -10px right 30px;
   }
 }

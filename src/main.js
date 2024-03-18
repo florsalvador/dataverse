@@ -1,6 +1,7 @@
 import { filterData, sortDataName } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
+import { computeStats } from './dataFunctions.js';
 import { renderItems } from './view.js';
 import data from './data/dataset.js';
 
@@ -9,7 +10,12 @@ const root = document.querySelector("#root");
 document.querySelector("main").appendChild(root);
 root.appendChild(renderItems(data));
 
-const conteo = document.getElementById("conteo");
+// menu responsive
+const menuResponsive = document.querySelector(".menu-responsive");
+const menuBoton = document.querySelector(".menu-boton");
+menuBoton.addEventListener("click", function() {
+  menuResponsive.style.display = "block";
+})
 
 // FUNCIONES USADAS EN LOS EVENTOS
 
@@ -69,6 +75,8 @@ const selectPelaje = document.querySelector("#pelajeGato");
 const selectPersonalidad = document.querySelector("#personalidad");
 const selectOrden = document.querySelector("#orden");
 
+const conteo = document.getElementById("conteo");
+
 // evento para select pelaje
 selectPelaje.addEventListener("change", function (evento) { // event: la informacion del evento, cuando haces un cambio viaja la informacion de que has seleccionado o que has seleccionado previamente
   
@@ -118,6 +126,7 @@ botonBorrar.addEventListener("click", function () {
   selectPelaje.value = "none";
   selectPersonalidad.value = "none";
   selectOrden.value = "sin-orden";
+  console.log(computeStats(data));
 })
 
 // al cargar la página, establece los valores por defecto
