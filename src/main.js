@@ -136,3 +136,15 @@ window.addEventListener("load", function () {
   selectOrden.value = "sin-orden";
 });
 
+
+//Funcionalidad de los botones ver mas
+let botonesVer= [];
+botonesVer = document.querySelectorAll("li");
+
+for (let i = 0; i < data.length; i++) {
+  botonesVer[i].addEventListener("click", function () {
+    sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+    //console.log(JSON.stringify(data[i]));
+    window.location.href = "gato.html";
+  });
+}
