@@ -59,7 +59,7 @@ select {
   font-size: 16px;
 }
 
-#botonBorrar {
+.botonMenu {
   border: 1px solid #FFF8F0;
   border-radius: 5px;
   background: none;
@@ -69,7 +69,7 @@ select {
   font-size: 16px;
 }
 
-#botonBorrar:hover {
+.botonMenu:hover {
   background-color: #dc6f61;
 }
 

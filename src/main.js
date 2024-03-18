@@ -3,6 +3,7 @@ import { filterData, sortDataPrice } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
+import { computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 // muestra los datos en index
@@ -148,3 +149,5 @@ for (let i = 0; i < data.length; i++) {
     window.location.href = "gato.html";
   });
 }
+
+console.log(computeStats(data))
