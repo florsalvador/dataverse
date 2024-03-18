@@ -14,8 +14,6 @@ export const renderItems = (data) => {
     <p>Pelaje: <span itemprop="pelajeGato">${onlyCat.facts["pelajeGato"]}</span></p>
     <p>Esperanza de vida: <span itemprop="esperanzaMax">${onlyCat.facts["esperanzaMax"]}</span></p>
     <p>Precio: <span itemprop="precioCachorro">${onlyCat.facts["precioCachorro"]}</span></p>
-    <div class="divBoton" ><button id="ver-mas" class="botonVer">Ver más</button></div>
-    
   </div>`
 
     newUl.appendChild(newLi); // inserta la etiqueta li en la etiqueta ul

@@ -129,7 +129,7 @@ window.addEventListener("load", function () {
 
 //Funcionalidad de los botones ver mas
 let botonesVer= [];
-botonesVer = document.querySelectorAll(".botonVer");
+botonesVer = document.querySelectorAll(".tarjeta");
 
 for (let i = 0; i < data.length; i++) {
   botonesVer[i].addEventListener("click", function () {

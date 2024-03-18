@@ -5,5 +5,5 @@ gatito = JSON.parse(gatito)
 console.log(JSON.stringify(gatito))
 
 const divGato = document.querySelector(".unicoGato");
-divGato.textContent = gatito["facts"]["precioCachorro"];
+divGato.textContent = gatito.name;
 

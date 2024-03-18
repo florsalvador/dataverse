@@ -84,6 +84,7 @@ h2 {
   padding: 30px;
   text-align: left;
   height: 520px;
+  cursor: pointer;
 }
 
 .tarjeta img {
