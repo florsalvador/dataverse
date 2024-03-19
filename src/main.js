@@ -34,7 +34,6 @@ function filtrarPelaje(data, pelajeSelec) {
   } else if (pelajeSelec === "sin-pelo") {
     gatosFiltrados = filterData(data, "pelajeGato", "Sin pelo");
   }
-
   return gatosFiltrados;
 }
 
@@ -52,23 +51,21 @@ function filtrarPersonalidad(data, personalidadSelec) {
   } else if (personalidadSelec === "jugueton") {
     gatosFiltrados = filterDataObj(data, "personalidad", "jugueton");
   }
-
   return gatosFiltrados;
 }
 
 function ordenar(data, ordenSelec) {
   let gatosOrdenados = data;
 
-  if (ordenSelec === "A-Z")  {
+  if (ordenSelec === "asc")  {
     gatosOrdenados = sortData(data, "id", "asc");
-  } else if (ordenSelec === "Z-A") {
+  } else if (ordenSelec === "desc") {
     gatosOrdenados = sortData(data, "id", "desc"); 
   } else if (ordenSelec === "precio-asc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "asc"); 
   }else if (ordenSelec === "precio-desc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "desc"); 
   }
-
   return gatosOrdenados;
 }
 
@@ -91,6 +88,19 @@ selectPelaje.addEventListener("change", function (evento) { // event: la informa
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
+
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
 });
 
 
@@ -105,6 +115,19 @@ selectPersonalidad.addEventListener("change", function (evento) {
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
+
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
 });
 
 // evento para ordenar
@@ -118,6 +141,19 @@ selectOrden.addEventListener("change", function (evento) {
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length;
+
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
 });
 
 // evento para boton borrar filtros

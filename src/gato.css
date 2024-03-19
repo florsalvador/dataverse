@@ -1,0 +1,34 @@
+body {
+  background-color: #EAE2F4;
+}
+
+h1 {
+  color: #6F3A34;
+  text-align: center;
+  font-family: "Laila", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 60px;
+  margin: 0;
+}
+
+.descripcion-caracteristicas {
+  display: flex;
+  flex-direction: row;
+}
+
+.imagen {
+  scale: 0.6;
+}
+
+.caracteristicas {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+}
+
+@media only screen and (max-width: 860px) {
+  .descripcion-caracteristicas {
+    flex-direction: column;
+  }
+}

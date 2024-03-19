@@ -9,7 +9,7 @@ export const renderItems = (data) => {
     newLi.setAttribute("itemtype", "RazasDeGatos");
 
     newLi.innerHTML = `<img src="${onlyCat.imageUrl}" alt="${onlyCat.id}">
-    <h2 itemprop="name">${onlyCat.name}</h2>
+    <h2 itemprop="sort-order">${onlyCat.name}</h2>
     <p itemprop="shortDescription" class="descripcion">${onlyCat.shortDescription}</p>
     <hr/>
     <p><span class="datos">✦ Tamaño:</span> <span itemprop="tamanoGato">${onlyCat.facts["tamanoGato"]}</span></p>
