@@ -34,10 +34,9 @@ export const sortDataPrice = (data, sortBy, sortOrder) => {
   return data1;
 };
 
-
+// funcion de estadisticas
 export const computeStats = (data) => {
-  
   const precioTotal = data.reduce((conteo, gato) => conteo + gato["facts"]["precioCachorro"], 0);
-
   return precioTotal / data.length;
 };
+

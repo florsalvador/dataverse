@@ -3,7 +3,7 @@ import { filterData, sortDataPrice } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
-import { computeStats } from './dataFunctions.js';
+// import { computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 // muestra los datos en index
@@ -12,10 +12,12 @@ document.querySelector("main").appendChild(root);
 root.appendChild(renderItems(data));
 
 // menu responsive
-const menuNormal = document.querySelector(".menu-normal");
-const menuBoton = document.querySelector(".menu-boton");
+const menuNormal = document.querySelector(".menu-normal"); // div con selects
+const menuBoton = document.querySelector(".menu-boton"); // boton menu responsive
 menuBoton.addEventListener("click", function() {
-  menuNormal.style.display = "flex";
+  if (menuNormal.style.display === "none" || !menuNormal.style.display) {
+    menuNormal.style.display = "flex";
+  } else menuNormal.style.display = "none";
 })
 
 // FUNCIONES USADAS EN LOS EVENTOS
@@ -150,4 +152,4 @@ for (let i = 0; i < data.length; i++) {
   });
 }
 
-console.log(computeStats(data))
+// console.log(computeStats(data))
