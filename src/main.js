@@ -1,9 +1,6 @@
 // import { example } from './dataFunctions.js';
-import { filterData, sortDataPrice } from './dataFunctions.js';
-import { filterDataObj } from './dataFunctions.js';
-import { sortData } from './dataFunctions.js';
+import { filterData, sortDataPrice, filterDataObj, sortData, computeStats} from './dataFunctions.js';
 import { renderItems } from './view.js';
-import { computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 // muestra los datos en index
@@ -212,5 +209,11 @@ for (let i = 0; i < data.length; i++) {
   });
 }
 
-
-console.log(computeStats(data))
+//Botón estadísticas
+const estadisticasBoton = document.getElementById("stats");
+const estadisticasDiv = document.querySelector(".div-stadisticas")
+estadisticasBoton.addEventListener("click", function() {
+  estadisticasDiv.style.display = "block";
+  estadisticasDiv.textContent = "El precio promedio de cada gato es: " + computeStats(data);
+  
+})
