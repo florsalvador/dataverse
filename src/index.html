@@ -28,75 +28,42 @@
   <nav>
 
     <button class="menu-boton"> ☰ </button>
-    <!-- <div class="menu-responsive">
-      <label for="pelajeGato">Filtrar por pelaje</label>
-      <select name="pelajeGato" id="pelajeGato">
-        <option value="none">Filtrar por pelaje</option>
-        <option value="todos">Todos</option>
-        <option value="pelo-corto">Pelo corto</option>
-        <option value="pelo-semilargo">Pelo semilargo</option>
-        <option value="pelo-largo">Pelo largo</option>
-        <option value="sin-pelo">Sin pelo</option>
-      </select>
-
-      <label for="personalidad">Filtrar por personalidad</label>
-      <select name="personalidad" id="personalidad">
-        <option value="none">Filtrar por personalidad</option>
-        <option value="todos">Todos</option>
-        <option value="tranquilo">Tranquilo</option>
-        <option value="carinoso">Cariñoso</option>
-        <option value="sociable">Sociable</option>
-        <option value="energico">Enérgico</option>
-        <option value="jugueton">Juguetón</option>
-      </select>
-
-      <label for="orden">Ordenar</label>
-      <select id="orden" name="orden">
-        <option value="sin-orden">Ordenar</option>
-        <option value="A-Z">Nombre (A-Z)</option>
-        <option value="Z-A">Nombre (Z-A)</option>
-        <option value="precio-asc">Precio (menor-mayor)</option>
-        <option value="precio-desc">Precio (mayor-menor)</option>
-      </select>
-
-      <span id="conteo">Cantidad: 24</span>
-      <button id="botonBorrar">Borrar filtros</button>
-    </div> -->
-
+    
     <div class="menu-normal">
-    <label for="pelajeGato">Filtrar por pelaje</label>
-      <select name="pelajeGato" id="pelajeGato">
-        <option value="none">Filtrar por pelaje</option>
-        <option value="todos">Todos</option>
-        <option value="pelo-corto">Pelo corto</option>
-        <option value="pelo-semilargo">Pelo semilargo</option>
-        <option value="pelo-largo">Pelo largo</option>
-        <option value="sin-pelo">Sin pelo</option>
-      </select>
+      <div class="contenedor-x"> <button class="cerrar-filtros"> x </button> </div>
+      <label for="pelajeGato">Filtrar por pelaje</label>
+        <select name="pelajeGato" id="pelajeGato" data-testid="select-filter">
+          <!-- <option value="none">Filtrar por pelaje</option>
+          <option value="todos">Todos</option> -->
+          <option value="pelo-corto">Pelo corto</option>
+          <option value="pelo-semilargo">Pelo semilargo</option>
+          <option value="pelo-largo">Pelo largo</option>
+          <option value="sin-pelo">Sin pelo</option>
+        </select>
 
       <label for="personalidad">Filtrar por personalidad</label>
-      <select name="personalidad" id="personalidad">
-        <option value="none">Filtrar por personalidad</option>
-        <option value="todos">Todos</option>
-        <option value="tranquilo">Tranquilo</option>
-        <option value="carinoso">Cariñoso</option>
-        <option value="sociable">Sociable</option>
-        <option value="energico">Enérgico</option>
-        <option value="jugueton">Juguetón</option>
-      </select>
+        <select name="personalidad" id="personalidad">
+          <!-- <option value="none">Filtrar por personalidad</option>
+          <option value="todos">Todos</option> -->
+          <option value="tranquilo">Tranquilo</option>
+          <option value="carinoso">Cariñoso</option>
+          <option value="sociable">Sociable</option>
+          <option value="energico">Enérgico</option>
+          <option value="jugueton">Juguetón</option>
+        </select>
 
       <label for="orden">Ordenar</label>
-      <select id="orden" name="orden">
-        <option value="sin-orden">Ordenar</option>
-        <!-- <option value="sin-orden">Sin orden</option> -->
-        <option value="A-Z">Nombre (A-Z)</option>
-        <option value="Z-A">Nombre (Z-A)</option>
-        <option value="precio-asc">Precio (menor-mayor)</option>
-        <option value="precio-desc">Precio (mayor-menor)</option>
-      </select>
+        <select id="orden" name="sort-order" data-testid="select-sort">
+          <!-- <option value="sin-orden">Ordenar</option> -->
+          <!-- <option value="sin-orden">Sin orden</option> -->
+          <option value="asc">Nombre (A-Z)</option>
+          <option value="desc">Nombre (Z-A)</option>
+          <option value="precio-asc">Precio (menor-mayor)</option>
+          <option value="precio-desc">Precio (mayor-menor)</option>
+        </select>
 
       <span id="conteo">Resultados: 24</span>
-      <button id="botonBorrar" class="botonMenu">Borrar filtros</button>
+      <button id="botonBorrar" class="botonMenu" data-testid="button-clear">Borrar filtros</button>
       <button id="stats" class="botonMenu">Estadísticas</button>
     </div>
   </nav>

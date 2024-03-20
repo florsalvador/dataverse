@@ -14,9 +14,20 @@ root.appendChild(renderItems(data));
 // menu responsive
 const menuNormal = document.querySelector(".menu-normal");
 const menuBoton = document.querySelector(".menu-boton");
+const cerrarFiltros  = document.querySelector(".cerrar-filtros");//Cambios Adri
 menuBoton.addEventListener("click", function() {
   menuNormal.style.display = "flex";
+  ////Cambios Adri
+  menuNormal.style.flexDirection = "column"
+  menuBoton.style.display = "none";
+  cerrarFiltros.style.display = "flex";
 })
+
+cerrarFiltros.addEventListener("click", function() {
+  menuBoton.style.display = "block"
+  menuNormal.style.display = "none"
+})
+///////CAmbios Adri
 
 // FUNCIONES USADAS EN LOS EVENTOS
 
@@ -57,10 +68,10 @@ function filtrarPersonalidad(data, personalidadSelec) {
 function ordenar(data, ordenSelec) {
   let gatosOrdenados = data;
 
-  if (ordenSelec === "A-Z")  {
-    gatosOrdenados = sortData(data, "id", "asc");
-  } else if (ordenSelec === "Z-A") {
-    gatosOrdenados = sortData(data, "id", "desc"); 
+  if (ordenSelec === "asc")  {
+    gatosOrdenados = sortData(data, "name", "asc");
+  } else if (ordenSelec === "desc") {
+    gatosOrdenados = sortData(data, "name", "desc"); 
   } else if (ordenSelec === "precio-asc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "asc"); 
   }else if (ordenSelec === "precio-desc") {
@@ -89,6 +100,21 @@ selectPelaje.addEventListener("change", function (evento) { // event: la informa
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
+  //---------------------Funcionalidad del boton ver mas------cambios Adri
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
+  //-----------------------
+
 });
 
 
@@ -103,6 +129,22 @@ selectPersonalidad.addEventListener("change", function (evento) {
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
+
+  //---------------------Funcionalidad del boton ver mas------ cambios Adri
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
+  //-----------------------
+
 });
 
 // evento para ordenar
@@ -116,6 +158,22 @@ selectOrden.addEventListener("change", function (evento) {
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length;
+
+  //--------------------- Funcionalidad del boton ver mas------ cambios Adri
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
+  //-----------------------
+
 });
 
 // evento para boton borrar filtros
@@ -138,16 +196,21 @@ window.addEventListener("load", function () {
 });
 
 
+
+
 //Funcionalidad de los botones ver mas
 let botonesVer= [];
 botonesVer = document.querySelectorAll("li");
 
 for (let i = 0; i < data.length; i++) {
   botonesVer[i].addEventListener("click", function () {
+
     sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+    //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
     //console.log(JSON.stringify(data[i]));
     window.location.href = "gato.html";
   });
 }
+
 
 console.log(computeStats(data))
