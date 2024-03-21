@@ -1,6 +1,3 @@
-// Aqui puedes agregar los datos que necesites para tus pruebas
-// al menos debe tener uno que se llame "data"
-
 export const data = [{
   "id": "persa",
   "name": "Persa",
@@ -74,5 +71,117 @@ export const data = [{
     },
     "cuidados": ["Juego interactivo diario para mantenerlo estimulado", "Control de la dieta para evitar la obesidad", "Visitas regulares al veterinario"]
   }
-}];
+},
+{
+  "id": "maine-coon",
+  "name": "Maine Coon",
+  "shortDescription": "Majestuoso y amigable, el Gato Maine Coon destaca por su tamaño impresionante y su naturaleza sociable.",
+  "description": "El Gato Maine Coon es una raza felina majestuosa y amigable, conocida por su tamaño impresionante y su personalidad sociable. Originario de Estados Unidos, este gato se destaca por su pelaje largo y denso, así como por su cola tupida y orejas grandes. A pesar de su apariencia imponente, el Maine Coon es gentil y se lleva bien con niños y otros animales. Con una esperanza de vida de 12 a 16 años, esta raza disfruta de la vida en interiores y exteriores. Sus rasgos faciales incluyen ojos grandes y expresivos, realzando su encanto.",
+  "imageUrl": "images/maine-coon.jpg",
+  "facts": {
+    "esperanzaMin": 12,
+    "esperanzaMax": 16,
+    "pesoMin": 5.44,
+    "pesoMax": 9.07,
+    "precioCachorro": 1300,
+    "tamanoGato": "Grande",
+    "lugarDeOrigen": "Estados Unidos",
+    "pelajeGato": "Pelo largo",
+    "rasgosFaciales": "Orejas grandes, ojos grandes y expresivos."
+  },
+  "extraInfo": {
+    "personalidad": {
+      "tranquilo": false,
+      "carinoso": true,
+      "sociable": true,
+      "energico": true,
+      "jugueton": true
+    },
+    "enfermedadesComunes": {
+      "problemasRespiratorios": false,
+      "problemasDentales": true,
+      "problemasCardiacos": false,
+      "problemasDePiel": false,
+      "problemasRenales": false,
+      "problemasOculares": true,
+      "tendenciaObesidad": true
+    },
+    "cuidados": ["Cepillado regular para evitar enredos en el pelaje", "Proporcionar juguetes para estimular la actividad", "Visitas regulares al veterinario"]
+  }
+},
+{
+  "id": "bengali",
+  "name": "Bengalí",
+  "shortDescription": "Elegante y enérgico, el Gato Bengalí destaca por su pelaje con patrones de leopardo y su naturaleza activa.",
+  "description": "El Gato Bengalí es una raza felina elegante y enérgica, conocida por su pelaje con patrones de leopardo y su naturaleza activa. Originario de Estados Unidos, este gato tiene una apariencia salvaje que se combina con una personalidad amigable. Su pelaje corto y brillante resalta sus marcas distintivas. Con una esperanza de vida de 10 a 16 años, el Bengalí disfruta del juego y la interacción. Sus rasgos faciales incluyen una cabeza pequeña y orejas puntiagudas, realzando su belleza única.",
+  "imageUrl": "images/bengali.jpg",
+  "facts": {
+    "esperanzaMin": 10,
+    "esperanzaMax": 16,
+    "pesoMin": 3.18,
+    "pesoMax": 6.8,
+    "precioCachorro": 1500,
+    "tamanoGato": "Mediano",
+    "lugarDeOrigen": "Estados Unidos",
+    "pelajeGato": "Pelo corto",
+    "rasgosFaciales": "Cabeza pequeña, orejas puntiagudas."
+  },
+  "extraInfo": {
+    "personalidad": {
+      "tranquilo": false,
+      "carinoso": true,
+      "sociable": true,
+      "energico": true,
+      "jugueton": true
+    },
+    "enfermedadesComunes": {
+      "problemasRespiratorios": false,
+      "problemasDentales": false,
+      "problemasCardiacos": false,
+      "problemasDePiel": true,
+      "problemasRenales": false,
+      "problemasOculares": false,
+      "tendenciaObesidad": false
+    },
+    "cuidados": ["Juguetes interactivos para estimular la actividad", "Cepillado ocasional para mantener el pelaje en buen estado", "Visitas regulares al veterinario"]
+  }
+},
+{
+  "id": "siberiano",
+  "name": "Siberiano",
+  "shortDescription": "Majestuoso y resistente, el Gato Siberiano destaca por su pelaje grueso y su capacidad para adaptarse a climas fríos.",
+  "description": "El Gato Siberiano es una raza felina majestuosa y resistente, conocida por su pelaje grueso y su capacidad para adaptarse a climas fríos. Originario de Rusia, este gato se caracteriza por su apariencia salvaje y su cola tupida. Su pelaje denso requiere cuidados regulares, y su naturaleza tranquila lo hace adecuado para hogares diversos. Con una esperanza de vida de 12 a 16 años, el Siberiano disfruta de la vida en interiores y exteriores. Sus rasgos faciales incluyen ojos grandes y expresivos, resaltando su belleza única.",
+  "imageUrl": "images/siberiano.jpg",
+  "facts": {
+    "esperanzaMin": 12,
+    "esperanzaMax": 16,
+    "pesoMin": 4.54,
+    "pesoMax": 9.07,
+    "precioCachorro": 1200,
+    "tamanoGato": "Mediano",
+    "lugarDeOrigen": "Rusia",
+    "pelajeGato": "Pelo largo",
+    "rasgosFaciales": "Ojos grandes y expresivos."
+  },
+  "extraInfo": {
+    "personalidad": {
+      "tranquilo": true,
+      "carinoso": true,
+      "sociable": true,
+      "energico": false,
+      "jugueton": false
+    },
+    "enfermedadesComunes": {
+      "problemasRespiratorios": false,
+      "problemasDentales": false,
+      "problemasCardiacos": false,
+      "problemasDePiel": false,
+      "problemasRenales": false,
+      "problemasOculares": false,
+      "tendenciaObesidad": false
+    },
+    "cuidados": ["Cepillado regular para evitar enredos en el pelaje", "Proporcionar lugares cálidos para descanso", "Visitas regulares al veterinario"]
+  }
+}
+];
 

@@ -52,7 +52,7 @@ select {
   cursor: pointer;
   font-size: 16px;
   text-align: center;
-  width: 20px;
+  /* width: 20px; */
 }
 
 .botonMenu {
@@ -68,7 +68,7 @@ select {
 .botonMenu:hover {
   /* background-color: #dc6f61; */
     background-color: #895866;
-    border: none;
+    border: 1px solid #895866;
 }
 
 .menu-boton {
@@ -87,7 +87,7 @@ select {
 
 .menu-normal {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -184,6 +184,10 @@ footer {
 footer p {
   margin: 0;
 }
+
+.div-stadisticas{
+  display: none;
+ }
 
 @media only screen and (max-width: 500px) {
 

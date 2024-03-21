@@ -3,7 +3,7 @@ import { filterData, sortDataPrice } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
 import { renderItems } from './view.js';
-// import { computeStats } from './dataFunctions.js';
+import { computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 // muestra los datos en index
@@ -165,7 +165,17 @@ botonBorrar.addEventListener("click", function () {
   selectPelaje.value = "none";
   selectPersonalidad.value = "none";
   selectOrden.value = "sin-orden";
-  // console.log(computeStats(data));
+
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < data.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
 })
 
 // al cargar la página, establece los valores por defecto
@@ -188,4 +198,11 @@ for (let i = 0; i < data.length; i++) {
   });
 }
 
-// console.log(computeStats(data))
+//Botón estadísticas
+const estadisticasBoton = document.getElementById("stats");
+const estadisticasDiv = document.querySelector(".div-stadisticas")
+estadisticasBoton.addEventListener("click", function() {
+  estadisticasDiv.style.display = "block";
+  estadisticasDiv.textContent = "El precio promedio de cada gato es: " + computeStats(data);
+  
+})
