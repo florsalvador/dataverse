@@ -26,11 +26,13 @@
   </header>
 
   <nav>
+    <div class="contenedor"> 
+      <button class="menu-boton"> ☰ </button>
+      <button class="cerrar-filtros"> x </button>
+    </div>
 
-    <button class="menu-boton"> ☰ </button>
-    
     <div class="menu-normal">
-      <div class="contenedor-x"> <button class="cerrar-filtros"> x </button> </div>
+      
       <label for="pelajeGato">Filtrar por pelaje</label>
         <select name="pelajeGato" id="pelajeGato" data-testid="select-filter">
           <!-- <option value="none">Filtrar por pelaje</option>
@@ -65,11 +67,12 @@
       <span id="conteo">Resultados: 24</span>
       <button id="botonBorrar" class="botonMenu" data-testid="button-clear">Borrar filtros</button>
       <button id="stats" class="botonMenu">Estadísticas</button>
-      <div class="div-stadisticas"></div>
+      
     </div>
   </nav>
 
   <main>
+    <div class="div-stadisticas"></div>
     <div id="root">
       
     </div>

@@ -11,20 +11,26 @@ root.appendChild(renderItems(data));
 // menu responsive
 const menuNormal = document.querySelector(".menu-normal");
 const menuBoton = document.querySelector(".menu-boton");
-const cerrarFiltros  = document.querySelector(".cerrar-filtros");//Cambios Adri
+const contenedor = document.querySelector(".contenedor");
+
+const cerrarFiltros  = document.querySelector(".cerrar-filtros");
+
 menuBoton.addEventListener("click", function() {
   menuNormal.style.display = "flex";
-  ////Cambios Adri
+  contenedor.style.display = "flex";
+  contenedor.style.flexDirection = "column";
   menuNormal.style.flexDirection = "column"
   menuBoton.style.display = "none";
   cerrarFiltros.style.display = "flex";
+  
 })
 
 cerrarFiltros.addEventListener("click", function() {
   menuBoton.style.display = "block"
   menuNormal.style.display = "none"
+  cerrarFiltros.style.display ="none"
 })
-///////CAmbios Adri
+
 
 // FUNCIONES USADAS EN LOS EVENTOS
 
@@ -183,6 +189,20 @@ botonBorrar.addEventListener("click", function () {
   selectPersonalidad.value = "none";
   selectOrden.value = "sin-orden";
   // console.log(computeStats(data));
+
+  //Funcionalidad de los botones ver mas
+  let botonesVer= [];
+  botonesVer = document.querySelectorAll("li");
+
+  for (let i = 0; i < data.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+
+      sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      //console.log(JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
 })
 
 // al cargar la página, establece los valores por defecto
