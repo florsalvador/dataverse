@@ -397,5 +397,13 @@
     "yocto-queue": "^0.1.0"
   },
   "keywords": [],
-  "author": ""
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/florsalvador/dataverse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/florsalvador/dataverse/issues"
+  },
+  "homepage": "https://github.com/florsalvador/dataverse#readme"
 }
