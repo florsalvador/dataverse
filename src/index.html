@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Dataverse</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <script src="main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Razas de gatos</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Lilita+One&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Londrina+Solid:wght@100;300;400;900&family=Rubik+Gemstones&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Razas de gatos</h1>
+    <h3>Las 24 razas de gatos más populares</h3>
+  </header>
+
+  <nav>
+    <div class="div-menu-boton">
+      <button class="menu-boton"> ☰ </button>
+      <button class="cerrar-filtros"> ☰ </button>
+    </div>
+
+    <div class="menu-normal">
+      <div class="div-select">
+        <label for="pelajeGato">Filtrar por pelaje</label>
+        <select name="pelajeGato" id="pelajeGato" data-testid="select-filter">
+          <option value="pelo-corto">Pelo corto</option>
+          <option value="pelo-semilargo">Pelo semilargo</option>
+          <option value="pelo-largo">Pelo largo</option>
+          <option value="sin-pelo">Sin pelo</option>
+        </select>
+      </div>
+
+      <div class="div-select">
+        <label for="personalidad">Filtrar por personalidad</label>
+        <select name="personalidad" id="personalidad">
+          <option value="tranquilo">Tranquilo</option>
+          <option value="carinoso">Cariñoso</option>
+          <option value="sociable">Sociable</option>
+          <option value="energico">Enérgico</option>
+          <option value="jugueton">Juguetón</option>
+        </select>
+      </div>
+
+      <div class="div-select">
+        <label for="orden">Ordenar</label>
+        <select id="orden" name="sort-order" data-testid="select-sort">
+          <option value="asc">Nombre (A-Z)</option>
+          <option value="desc">Nombre (Z-A)</option>
+          <option value="precio-asc">Precio (menor-mayor)</option>
+          <option value="precio-desc">Precio (mayor-menor)</option>
+        </select>
+      </div>
+
+      <span id="conteo">Resultados: 24</span>
+      <button id="botonBorrar" class="botonMenu" data-testid="button-clear">Borrar filtros</button>
+      <button id="stats" class="botonMenu">Estadísticas</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="contenedor-estadisticas">
+      <button class="boton-cerrar-estadisticas"> X </button>
+      <div class="div-estadisticas"></div>
+    </div>
+    <div id="root">
+
+    </div>
+  </main>
+
+  <footer>
+    <p>🐈‍⬛ 🐈‍⬛  Hecho por: Adriana y Flor 🐈‍⬛ 🐈‍⬛</p>
+  </footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
