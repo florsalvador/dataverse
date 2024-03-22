@@ -62,7 +62,11 @@ for (let i = 0; i < enfermedades.length; i++) {
   }
 }
 enfermedadesComunes.textContent = Contenido;
+<<<<<<< HEAD
 /////////////////////////////////////
+=======
+///////////////////////////////////////////////
+>>>>>>> 9308a346c918e7289dc567174abdc15ddef0f110
 
 const  cuidados = document.querySelector(".cuidados");
 cuidados.textContent = gatito["extraInfo"]["cuidados"];

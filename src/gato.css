@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: #EAE2F4;
 }
@@ -32,3 +33,42 @@ h1 {
     flex-direction: column;
   }
 }
+=======
+body{
+    background-color: #eae2f4;
+}
+
+h1 {
+    color: #6f3a34;
+    text-align: center;
+    font-family: "Laila", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    margin: 0;
+  }
+
+  .descripcion-caracteristicas{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.imagen{
+    scale: 0.6;
+}
+
+.caracteristicas{
+    display: flex;
+    flex-direction: column;
+    font-family: "Inter", sans-serif;
+
+}
+
+@media only screen and (max-width: 860px) {
+    .descripcion-caracteristicas{
+        flex-direction: column;
+        
+    }
+}
+>>>>>>> 9308a346c918e7289dc567174abdc15ddef0f110

@@ -1,7 +1,5 @@
-import { filterData, filterDataObj, sortData, sortDataPrice, computeStats } from '../src/dataFunctions.js';
+import { filterData, filterDataObj, sortData, sortDataPrice, computeStats} from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
-
-//console.log(fakeData);
 
 describe('Función filterData', () => {
 
