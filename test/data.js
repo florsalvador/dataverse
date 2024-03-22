@@ -182,6 +182,43 @@ export const data = [{
     },
     "cuidados": ["Cepillado regular para evitar enredos en el pelaje", "Proporcionar lugares cálidos para descanso", "Visitas regulares al veterinario"]
   }
+},
+{
+  "id": "britanico-corto",
+  "name": "Británico de Pelo Corto",
+  "shortDescription": "Robusto y cariñoso, el Gato Británico de Pelo Corto destaca por su pelaje denso y su temperamento equilibrado.",
+  "description": "El Gato Británico de Pelo Corto es una raza felina robusta y cariñosa, reconocida por su pelaje denso y su temperamento equilibrado. Originario del Reino Unido, este gato tiene una apariencia redondeada y ojos grandes que expresan su dulzura. Su pelaje corto requiere cuidados mínimos, y su naturaleza tranquila lo hace adecuado para hogares diversos. Con una esperanza de vida de 12 a 20 años, el Británico de Pelo Corto disfruta de la vida en interiores y la compañía de su familia. Sus rasgos faciales incluyen una cabeza redonda y ojos grandes, realzando su encanto.",
+  "imageUrl": "images/britanico-corto.jpg",
+  "facts": {
+    "esperanzaMin": 12,
+    "esperanzaMax": 20,
+    "pesoMin": 4.08,
+    "pesoMax": 7.26,
+    "precioCachorro": 1000,
+    "tamanoGato": "Mediano",
+    "lugarDeOrigen": "Reino Unido",
+    "pelajeGato": "Pelo corto",
+    "rasgosFaciales": "Cabeza redonda, ojos grandes."
+  },
+  "extraInfo": {
+    "personalidad": {
+      "tranquilo": true,
+      "carinoso": true,
+      "sociable": true,
+      "energico": false,
+      "jugueton": false
+    },
+    "enfermedadesComunes": {
+      "problemasRespiratorios": true,
+      "problemasDentales": true,
+      "problemasCardiacos": false,
+      "problemasDePiel": false,
+      "problemasRenales": false,
+      "problemasOculares": true,
+      "tendenciaObesidad": false
+    },
+    "cuidados": ["Cepillado ocasional para mantener el pelaje en buen estado", "Proporcionar lugares cómodos para descanso", "Visitas regulares al veterinario"]
+  }
 }
 ];
 

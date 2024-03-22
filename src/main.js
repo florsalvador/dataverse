@@ -1,9 +1,5 @@
-// import { example } from './dataFunctions.js';
-import { filterData, sortDataPrice } from './dataFunctions.js';
-import { filterDataObj } from './dataFunctions.js';
-import { sortData } from './dataFunctions.js';
+import { filterData, sortDataPrice, filterDataObj, sortData, computeStats} from './dataFunctions.js';
 import { renderItems } from './view.js';
-import { computeStats } from './dataFunctions.js';
 import data from './data/dataset.js';
 
 // muestra los datos en index
@@ -13,15 +9,21 @@ root.appendChild(renderItems(data));
 
 // menu responsive
 const menuNormal = document.querySelector(".menu-normal"); // div con selects
-const menuBoton = document.querySelector(".menu-boton"); // boton menu responsive
+const menuBoton = document.querySelector(".menu-boton"); // boton menu abrir
+const cerrarFiltros  = document.querySelector(".cerrar-filtros"); // boton menu cerrar
 menuBoton.addEventListener("click", function() {
-  if (menuNormal.style.display === "none" || !menuNormal.style.display) {
-    menuNormal.style.display = "flex";
-  } else menuNormal.style.display = "none";
+  menuBoton.style.display = "none";
+  cerrarFiltros.style.display = "block";
+  menuNormal.style.display = "flex";
+})
+cerrarFiltros.addEventListener("click", function() {
+  menuBoton.style.display = "block";
+  cerrarFiltros.style.display ="none";
+  menuNormal.style.display = "none";
 })
 
-// FUNCIONES USADAS EN LOS EVENTOS
 
+// FUNCIONES USADAS EN LOS EVENTOS
 function filtrarPelaje(data, pelajeSelec) {
   let gatosFiltrados = data;
 
@@ -34,6 +36,7 @@ function filtrarPelaje(data, pelajeSelec) {
   } else if (pelajeSelec === "sin-pelo") {
     gatosFiltrados = filterData(data, "pelajeGato", "Sin pelo");
   }
+
   return gatosFiltrados;
 }
 
@@ -51,6 +54,7 @@ function filtrarPersonalidad(data, personalidadSelec) {
   } else if (personalidadSelec === "jugueton") {
     gatosFiltrados = filterDataObj(data, "personalidad", "jugueton");
   }
+
   return gatosFiltrados;
 }
 
@@ -58,28 +62,40 @@ function ordenar(data, ordenSelec) {
   let gatosOrdenados = data;
 
   if (ordenSelec === "asc")  {
-    gatosOrdenados = sortData(data, "id", "asc");
+    gatosOrdenados = sortData(data, "name", "asc");
   } else if (ordenSelec === "desc") {
-    gatosOrdenados = sortData(data, "id", "desc"); 
+    gatosOrdenados = sortData(data, "name", "desc"); 
   } else if (ordenSelec === "precio-asc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "asc"); 
   }else if (ordenSelec === "precio-desc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "desc"); 
   }
+
   return gatosOrdenados;
 }
 
-// EVENTOS SELECT
+//Funcionalidad de tarjeta ver mas
+function tarjetasVer (data){
+  const botonesVer = document.querySelectorAll("li");
 
+  for (let i = 0; i < data.length; i++) {
+    botonesVer[i].addEventListener("click", function () {
+      sessionStorage.setItem("gatito", JSON.stringify(data[i]));
+      window.location.href = "gato.html";
+    });
+  }
+}
+tarjetasVer(data);
+
+// EVENTOS SELECT
 const selectPelaje = document.querySelector("#pelajeGato");
 const selectPersonalidad = document.querySelector("#personalidad");
 const selectOrden = document.querySelector("#orden");
-
+//contador
 const conteo = document.getElementById("conteo");
 
 // evento para select pelaje
-selectPelaje.addEventListener("change", function (evento) { // event: la informacion del evento, cuando haces un cambio viaja la informacion de que has seleccionado o que has seleccionado previamente
-  
+selectPelaje.addEventListener("change", function (evento) { // event: la informacion del evento, cuando haces un cambio viaja la informacion de que seleccionas o que has seleccionado previamente
   //insertar las funciones
   const gatosFiltradosPelaje = filtrarPelaje(data, evento.target.value);
   const gatosFiltradosPelajePersonalidad = filtrarPersonalidad(gatosFiltradosPelaje, selectPersonalidad.value);
@@ -87,26 +103,14 @@ selectPelaje.addEventListener("change", function (evento) { // event: la informa
 
   root.innerHTML = "";
   root.appendChild(renderItems(gatosFiltradosOrdenados));
-  conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
-
-  let botonesVer= [];
-  botonesVer = document.querySelectorAll("li");
-
-  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
-    botonesVer[i].addEventListener("click", function () {
-
-      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
-      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
-      //console.log(JSON.stringify(data[i]));
-      window.location.href = "gato.html";
-    });
-  }
+  conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // contador
+  
+  tarjetasVer(gatosFiltradosOrdenados);
 });
 
 
 // evento para select personalidad
 selectPersonalidad.addEventListener("change", function (evento) {
-
   // insertar las funciones
   const gatosFiltradosPelaje = filtrarPelaje(data, selectPelaje.value);
   const gatosFiltradosPelajePersonalidad = filtrarPersonalidad(gatosFiltradosPelaje, evento.target.value);
@@ -116,23 +120,11 @@ selectPersonalidad.addEventListener("change", function (evento) {
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length; // muestra la cantidad
 
-  let botonesVer= [];
-  botonesVer = document.querySelectorAll("li");
-
-  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
-    botonesVer[i].addEventListener("click", function () {
-
-      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
-      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
-      //console.log(JSON.stringify(data[i]));
-      window.location.href = "gato.html";
-    });
-  }
+  tarjetasVer(gatosFiltradosOrdenados);
 });
 
 // evento para ordenar
 selectOrden.addEventListener("change", function (evento) {
-
   // insertar las funciones
   const gatosFiltradosPelaje = filtrarPelaje(data, selectPelaje.value);
   const gatosFiltradosPelajePersonalidad = filtrarPersonalidad(gatosFiltradosPelaje, selectPersonalidad.value);
@@ -142,18 +134,7 @@ selectOrden.addEventListener("change", function (evento) {
   root.appendChild(renderItems(gatosFiltradosOrdenados));
   conteo.textContent = "Cantidad: " + gatosFiltradosOrdenados.length;
 
-  let botonesVer= [];
-  botonesVer = document.querySelectorAll("li");
-
-  for (let i = 0; i < gatosFiltradosOrdenados.length; i++) {
-    botonesVer[i].addEventListener("click", function () {
-
-      sessionStorage.setItem("gatito", JSON.stringify(gatosFiltradosOrdenados[i]));
-      //sessionStorage.setItem("gatito", JSON.stringify(data[i]));
-      //console.log(JSON.stringify(data[i]));
-      window.location.href = "gato.html";
-    });
-  }
+  tarjetasVer(gatosFiltradosOrdenados);
 });
 
 // evento para boton borrar filtros
@@ -166,16 +147,24 @@ botonBorrar.addEventListener("click", function () {
   selectPersonalidad.value = "none";
   selectOrden.value = "sin-orden";
 
-  let botonesVer= [];
-  botonesVer = document.querySelectorAll("li");
+  tarjetasVer(data);
+})
 
-  for (let i = 0; i < data.length; i++) {
-    botonesVer[i].addEventListener("click", function () {
-
-      sessionStorage.setItem("gatito", JSON.stringify(data[i]));
-      window.location.href = "gato.html";
-    });
-  }
+//Botón estadísticas
+const estadisticasBoton = document.getElementById("stats");
+const estadisticasDiv = document.querySelector(".div-estadisticas")
+const cerrar = document.querySelector(".boton-cerrar-estadisticas")
+estadisticasBoton.addEventListener("click", function() {
+  cerrar.style.display = "flex";
+  cerrar.style.justifyContent = "flex-end";
+  estadisticasDiv.style.display = "flex";
+  estadisticasDiv.style.justifyContent = "center"
+  //estadisticasDiv.innerHTML = `El precio promedio de cada gato es: ${computeStats(data)} <button class="cerrar-estadisticas"> X </button>`;
+  estadisticasDiv.textContent = "El precio promedio de cada gato es: " + computeStats(data);
+})
+cerrar.addEventListener("click", function() {
+  estadisticasDiv.style.display = "none";
+  cerrar.style.display = "none";
 })
 
 // al cargar la página, establece los valores por defecto
@@ -184,25 +173,3 @@ window.addEventListener("load", function () {
   selectPersonalidad.value = "none";
   selectOrden.value = "sin-orden";
 });
-
-
-//Funcionalidad de los botones ver mas
-let botonesVer= [];
-botonesVer = document.querySelectorAll("li");
-
-for (let i = 0; i < data.length; i++) {
-  botonesVer[i].addEventListener("click", function () {
-    sessionStorage.setItem("gatito", JSON.stringify(data[i]));
-    //console.log(JSON.stringify(data[i]));
-    window.location.href = "gato.html";
-  });
-}
-
-//Botón estadísticas
-const estadisticasBoton = document.getElementById("stats");
-const estadisticasDiv = document.querySelector(".div-stadisticas")
-estadisticasBoton.addEventListener("click", function() {
-  estadisticasDiv.style.display = "block";
-  estadisticasDiv.textContent = "El precio promedio de cada gato es: " + computeStats(data);
-  
-})
