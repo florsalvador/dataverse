@@ -1,4 +1,3 @@
-// import { example } from './dataFunctions.js';
 import { filterData, sortDataPrice } from './dataFunctions.js';
 import { filterDataObj } from './dataFunctions.js';
 import { sortData } from './dataFunctions.js';
@@ -13,11 +12,19 @@ root.appendChild(renderItems(data));
 
 // menu responsive
 const menuNormal = document.querySelector(".menu-normal"); // div con selects
-const menuBoton = document.querySelector(".menu-boton"); // boton menu responsive
+const menuBoton = document.querySelector(".menu-boton"); // boton menu abrir
+const cerrarFiltros  = document.querySelector(".cerrar-filtros"); // boton menu cerrar
+
 menuBoton.addEventListener("click", function() {
-  if (menuNormal.style.display === "none" || !menuNormal.style.display) {
-    menuNormal.style.display = "flex";
-  } else menuNormal.style.display = "none";
+  menuBoton.style.display = "none";
+  cerrarFiltros.style.display = "block";
+  menuNormal.style.display = "flex";
+})
+
+cerrarFiltros.addEventListener("click", function() {
+  menuBoton.style.display = "block";
+  cerrarFiltros.style.display ="none";
+  menuNormal.style.display = "none";
 })
 
 // FUNCIONES USADAS EN LOS EVENTOS
@@ -58,12 +65,12 @@ function ordenar(data, ordenSelec) {
   let gatosOrdenados = data;
 
   if (ordenSelec === "asc")  {
-    gatosOrdenados = sortData(data, "id", "asc");
+    gatosOrdenados = sortData(data, "name", "asc");
   } else if (ordenSelec === "desc") {
-    gatosOrdenados = sortData(data, "id", "desc"); 
+    gatosOrdenados = sortData(data, "name", "desc"); 
   } else if (ordenSelec === "precio-asc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "asc"); 
-  }else if (ordenSelec === "precio-desc") {
+  } else if (ordenSelec === "precio-desc") {
     gatosOrdenados = sortDataPrice(data, "precioCachorro", "desc"); 
   }
   return gatosOrdenados;

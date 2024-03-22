@@ -15,7 +15,7 @@ export const sortData = (data, sortBy, sortOrder) => {
       return (a[sortBy] > b[sortBy]) ? 1 : -1; //codigo ternario si es true devuelve 1 si es false devuelve -1
     }else if(sortOrder === "desc"){
       return (a[sortBy] < b[sortBy]) ? 1 : -1;
-    }else return 0;
+    }//else return 0;
   });
 
   return data1;
@@ -28,7 +28,7 @@ export const sortDataPrice = (data, sortBy, sortOrder) => {
       return (a["facts"][sortBy] > b["facts"][sortBy]) ? 1 : -1; //codigo ternario si es true devuelve 1 si es false devuelve -1
     }else if(sortOrder === "desc"){
       return (a["facts"][sortBy] < b["facts"][sortBy]) ? 1 : -1;
-    }else return 0;
+    }//else return 0;
   });
 
   return data1;
