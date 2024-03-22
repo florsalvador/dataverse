@@ -1,8 +1,6 @@
 import { filterData, filterDataObj, sortData, sortDataPrice, computeStats} from '../src/dataFunctions.js';
 import { data as fakeData } from './data.js';
 
-//console.log(fakeData);
-
 describe('Función filterData', () => {
 
   it('Retorna 3 para la cantidad de gatos de pelo corto', () => {
