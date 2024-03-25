@@ -4,7 +4,6 @@ import data from './data/dataset.js';
 
 // muestra los datos en index
 const root = document.querySelector("#root");
-document.querySelector("main").appendChild(root);
 root.appendChild(renderItems(data));
 
 // menu responsive
