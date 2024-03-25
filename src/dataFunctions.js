@@ -10,8 +10,8 @@ export const filterDataObj = (data, filterBy, value) => {
 
 // orden A-Z y de Z-A
 export const sortData = (data, sortBy, sortOrder) => {
-  const data1 = [...data];//creando copia
-  
+  // const data1 = [...data];//creando copia
+  const data1 = data.map(x => x);
   data1.sort((a, b) =>{
     if(sortOrder === "asc"){
       return (a[sortBy] > b[sortBy]) ? 1 : -1; //codigo ternario si es true devuelve 1 si es false devuelve -1
@@ -24,7 +24,7 @@ export const sortData = (data, sortBy, sortOrder) => {
 
 //Ordena por precios
 export const sortDataPrice = (data, sortBy, sortOrder) => {
-  const data1 = [...data];//creando copia// spread
+  const data1 = data.map(x => x);
   data1.sort((a, b) =>{
     if(sortOrder === "asc"){
       return (a["facts"][sortBy] > b["facts"][sortBy]) ? 1 : -1; //codigo ternario si es true devuelve 1 si es false devuelve -1
